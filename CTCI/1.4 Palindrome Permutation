@@ -1,0 +1,22 @@
+public class Main {
+    public static void main(String[] args) {
+        
+        String str = "aabbcc^";
+        int oddcount = 0;
+        int[] arr = new int[128];
+        
+        System.out.println(arr['a']);
+        
+        for(char c: str.toCharArray()){
+            arr[c]++;
+        }
+        
+        for(int i: arr){
+            if(i%2!=0 && ++oddcount > 1){
+                System.out.println("Not Palindrome");
+                return ;
+            }
+        }        
+        System.out.println("Panlindrome");
+    }
+}
