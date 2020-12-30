@@ -1,0 +1,77 @@
+public class Main {
+    public static void main(String[] args) {
+
+        String str = "aaaa";
+        String pattern = "aaa";
+        System.out.println(approach1(str, pattern));
+        System.out.println(approach2(str, pattern));
+    }
+    
+    static int approach1(String str, String pattern) {
+
+        Map<Character, Integer> patternMap = new HashMap<Character, Integer>();
+       
+        for(char ch : pattern.toCharArray()) {
+            if(patternMap.get(ch) == null){
+                patternMap.put(ch, 1);
+            }else{
+            patternMap.put(ch, patternMap.get(ch)+1);
+            }
+        }
+    
+        int i=0;
+        int j=0;
+        int k=pattern.length();
+        int count=patternMap.size();
+        int ans=0;
+        char arr[] = str.toCharArray();
+        
+        while(j<str.length()){
+        
+            if(patternMap.get(arr[j]) > 0){
+             patternMap.put(arr[j], patternMap.get(arr[j])-1);
+            }
+            if(patternMap.get(arr[j]) == 0){
+                count--;
+            }
+            if(j-i+1 == k){
+                if(count==0){
+                    ans++;
+                }
+                patternMap.put(arr[i], patternMap.get(arr[i])+1);
+                count++;
+                i++;
+            }
+            j++;
+        }
+        return ans;
+    }
+    
+    static int approach2(String str, String pattern) {
+   
+        int i, j, count;
+        i=j=count=0;
+
+        char[] arr = str.toCharArray();
+        int[] sourceMap = new int[128];
+        int[] patternMap = new int[128];
+
+        for (int c: pattern.toCharArray()) {
+            patternMap[c]++;
+        }
+        
+        while (j<str.length()) {
+            sourceMap[arr[j]]++;
+
+            if (j-i+1 == pattern.length()) {
+                if (Arrays.equals(patternMap, sourceMap)) {
+                    count++;
+                }
+                sourceMap[arr[i]]--;
+                i++;
+            }
+            j++;
+        }
+        return count;
+    }
+}
