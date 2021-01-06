@@ -1,49 +1,60 @@
 public class Main {
     public static void main(String[] args) {
 
-        String str = "aaaa";
-        String pattern = "aaa";
+        String str = "aabaabaa";
+        String pattern = "aaba";
         System.out.println(approach1(str, pattern));
         System.out.println(approach2(str, pattern));
     }
     
     static int approach1(String str, String pattern) {
-
-        Map<Character, Integer> patternMap = new HashMap<Character, Integer>();
-       
+        
+        char[] arr = str.toCharArray();
+        int i = 0;
+        int j = 0;
+        Map<Character, Integer> map = new HashMap();
+        
         for(char ch : pattern.toCharArray()) {
-            if(patternMap.get(ch) == null){
-                patternMap.put(ch, 1);
+            if(map.get(ch) == null){
+                map.put(ch, 1);
             }else{
-            patternMap.put(ch, patternMap.get(ch)+1);
+            map.put(ch, map.get(ch)+1);
             }
         }
-    
-        int i=0;
-        int j=0;
-        int k=pattern.length();
-        int count=patternMap.size();
-        int ans=0;
-        char arr[] = str.toCharArray();
+        
+        int count = map.size();
+        int ans = 0;
+        int windowSize = pattern.length();
+        
         
         while(j<str.length()){
-        
-            if(patternMap.get(arr[j]) > 0){
-             patternMap.put(arr[j], patternMap.get(arr[j])-1);
+            
+            if(map.get(arr[j]) != null){
+                map.put(arr[j],  map.get(arr[j])-1);
             }
-            if(patternMap.get(arr[j]) == 0){
+            
+            if(map.get(arr[j]) != null && map.get(arr[j]) == 0){
                 count--;
             }
-            if(j-i+1 == k){
-                if(count==0){
-                    ans++;
-                }
-                patternMap.put(arr[i], patternMap.get(arr[i])+1);
-                count++;
-                i++;
+            
+            if(count == 0){
+                ans++;
             }
-            j++;
+            
+            if(j-i+1 == windowSize){
+                
+                if(map.get(arr[i]) != null){
+                    map.put(arr[i],  map.get(arr[i])+1);
+                }
+                if(map.get(arr[i]) != null &&  map.get(arr[i]) == 1){
+                    count++;
+                }
+            i++;    
+            }
+            
+           j++; 
         }
+        
         return ans;
     }
     
