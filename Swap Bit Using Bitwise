@@ -1,12 +1,22 @@
 public class Main {
     public static void main(String[] args) {
+
+        int num  = 20;
+        int i = 2;
+        int j = 3;
         
-        int num  = 28;
-        int i = 1;
-        int j = 4;
+        int numBrute = bruteForce(num, i, j);
+        System.out.println(numBrute);
         
-        int bit1 = num & 1<<i;
-        int bit2 = num & 1<<j;
+        int numOpti = optimal(num, i, j);
+        System.out.println(numOpti);
+            
+        }
+    
+     static int bruteForce(int num, int i, int j){
+        
+          int bit1 = num & 1<<i;
+          int bit2 = num & 1<<j;
         
         if(bit1 != 0){
             bit1 = 1;
@@ -29,8 +39,17 @@ public class Main {
             }else{
                 num = num | (1<<i);
             }
-            
+        }
+         return num;
     }
-        System.out.println(num);
-    }
+     static int optimal(int num, int i, int j){
+         
+         if( ((num>>i)&1) != ((num>>j)&1)){
+             int bitMask = 1<<i | 1<<j;
+             num = num ^ bitMask;
+         }
+    return num;
+}    
 }
+    
+   
