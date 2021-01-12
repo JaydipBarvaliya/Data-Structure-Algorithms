@@ -1,0 +1,36 @@
+public class Main {
+    public static void main(String[] args) {
+        
+        int num  = 28;
+        int i = 1;
+        int j = 4;
+        
+        int bit1 = num & 1<<i;
+        int bit2 = num & 1<<j;
+        
+        if(bit1 != 0){
+            bit1 = 1;
+        }
+        
+        if(bit2 != 0){
+            bit2 = 1;
+        }
+            
+        if(bit1 != bit2){
+            
+            if(bit1 == 0){
+                num = num & ~(1<<j);
+            }else{
+                num = num | (1<<j);
+            }
+
+            if(bit2 == 0){
+                num = num & ~(1<<i);
+            }else{
+                num = num | (1<<i);
+            }
+            
+    }
+        System.out.println(num);
+    }
+}
