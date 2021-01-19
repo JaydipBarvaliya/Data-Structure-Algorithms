@@ -5,6 +5,10 @@ public class Main {
         System.out.println(approach2(0.625));
     }
     
+    
+    
+    
+    
     static String approach1(double num){
         
         if(num>=1 || num<=0){
@@ -30,8 +34,12 @@ public class Main {
         return binary.toString();
     }
     
+    
+    
+    
+    
+    
     static String approach2(double num){
-        
         
         if(num>=1 || num<=0){
             return "ERROR";
@@ -56,4 +64,7 @@ public class Main {
         }
     return binary.toString();
     }
+    
+    
+    
 }
