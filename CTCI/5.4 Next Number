@@ -91,6 +91,13 @@ public class Main {
                 
                 num = num | (1 << (i+1));
                 num = num & (-1 << i+1);
+                
+                // below step are the clear bifurcation of FS
+                // a  = 1 << (c1  -1)       // 0s  with a  1   at  position c1 - 1 
+                // b  =  a - 1		 	     // 0S  with ls  at  positions 0  through  c1 - 1
+                // n  =  n | b     		 // inserts ls  at  positions 0  through c1 - 1
+                    
+                // FS   
                 num = num | ((1<<(oneCount-1)) - 1);
                 return num;
             }
@@ -120,8 +127,20 @@ public class Main {
                 
                 num = num &  ~(1<<(i+1));
                 num = num & (-1 << (i+1));
+                
+                //below step are the clear bifurcation of FS
+                // int  a = 1 <<  (c1 + 1);  //  0s with 1  at  position (c1+  1) 
+                // int  b  =  a  -1;              // 0s  followed by  c1+ 1  ones 
+                // int  c  =  b << (c0 - 1);  // cl+l ones followed by c0-1  zeros.
+                // n = n | c;
+                
+                //FS
                 num = num |  ( ((1<<(oneCount+1))-1) << (zeroCount-1) );
                 return num;
+                
+                
+                
+                
             }
             temp = temp >>> 1;
             i++;
