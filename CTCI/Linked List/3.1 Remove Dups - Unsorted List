@@ -2,9 +2,9 @@
 
 // With Buffer
 {
-		if(head == null){
+	if(head == null){
              return head;
-		}
+	}
          
          boolean[] arr = new boolean[65535];
          Node currentNode = head;
@@ -26,9 +26,9 @@
 // Without Buffer
 {
  
-    		if(head == null){
+	if(head == null){
              return head;
-            }
+        }
         Node currentNode = head;
         
         while(currentNode != null){
