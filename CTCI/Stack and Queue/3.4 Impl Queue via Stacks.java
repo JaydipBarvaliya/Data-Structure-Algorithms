@@ -3,8 +3,7 @@ class StackQueue
     Stack<Integer> s1 = new Stack<Integer>();
     Stack<Integer> s2 = new Stack<Integer>();
 
-    void Push(int x)
-    {
+    void Push(int x){
         
         while (!s1.isEmpty())
             s2.push(s1.pop());  
@@ -18,9 +17,7 @@ class StackQueue
     
     
     int Pop(){
-        
         return  s1.isEmpty() ? -1: s1.pop();
-        
     }
 }
 
