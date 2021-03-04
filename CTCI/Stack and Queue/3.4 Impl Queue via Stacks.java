@@ -34,19 +34,19 @@ class MyQueue {
     Stack<Integer> s1 = new Stack();
     Stack<Integer> s2 = new Stack();
     int front;
-    public MyQueue() {
-        
-    }
+    
+    public MyQueue() {}
+    
+    
     
     public void push(int x) {
-        
         front = s1.isEmpty() ? x: front;
         s1.push(x);
-        
     }
+
+    
     
     public int pop() {
-        
         
         if(s1.isEmpty() && s2.isEmpty()) {
             return -1;
@@ -57,14 +57,13 @@ class MyQueue {
                 s2.push(s1.pop());
             }
         }
-        
         return s2.pop();
     }
     
+    
+    
     public int peek() {
-        
         return !s2.isEmpty()  ? s2.peek() : front;
-        
     }
     
     public boolean empty() {
