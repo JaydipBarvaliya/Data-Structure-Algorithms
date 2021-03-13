@@ -15,3 +15,6 @@
 3.1
 
 3.6 Animal Shelter
+
+https://leetcode.com/problems/merge-two-binary-trees/solution/ --> Iterative solution 2 pending
+
