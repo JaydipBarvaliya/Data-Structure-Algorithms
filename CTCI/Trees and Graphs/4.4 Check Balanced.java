@@ -39,6 +39,7 @@ class Solution {
 //------------------------------------------------
 // Below code will perfectly work and check tree and sub tree which is balanced or not
 
+
 class Solution {
     
     public boolean isBalanced(TreeNode root) {
@@ -50,9 +51,12 @@ class Solution {
         if(root==null) return 0;
         
         int left  = dfs(root.left);
-        int right = dfs(root.right);
+        if(left == -1) return -1;
         
-        if(left == -1 || right == -1 || Math.abs(left - right) > 1) return -1;
+        int right = dfs(root.right);
+        if(right == -1) return -1;
+        
+        if(Math.abs(left - right) > 1) return -1;
         
         return Math.max(left, right) + 1;
     }
