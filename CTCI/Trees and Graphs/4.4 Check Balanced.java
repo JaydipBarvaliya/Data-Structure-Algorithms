@@ -1,4 +1,6 @@
-//This code check dippest height of left subtree & dippest height of right subtree.. and then do calculation. However, as per the leetcode question, we have to check the every node of tree and we have to check that whether it is balanced or not, if any of the sub-node defined it is unbalanced then we declare entire tree as unbalanced  
+// This code check dippest height of left subtree & dippest height of right subtree.. and then do calculation. However, as per the leetcode question,
+// we have to check the every node of tree and we have to check that whether it is balanced or not, if any of the sub-node defined it is unbalanced
+// then we declare entire tree as unbalanced  
 class Solution {
     int lefter  = 0;
     int righter = 0;
