@@ -29,22 +29,19 @@ class Solution {
 //Iterating method using Stack
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
+        
         Stack<TreeNode> stack = new Stack();
         List<Integer> list = new ArrayList();
 
-        TreeNode curr = root;
+        while(root != null || !stack.isEmpty()){
 
-        while(curr != null || !stack.isEmpty()){
-
-            while(curr!=null){
-                stack.push(curr);
-                list.add(curr.val);
-                curr = curr.left;
+            while(root!=null){
+                stack.push(root);
+                list.add(root.val);
+                root = root.left;
             }
-
-            curr = stack.pop().right;
+            root = stack.pop().right;
         }
-
         return list;
     }
 }
