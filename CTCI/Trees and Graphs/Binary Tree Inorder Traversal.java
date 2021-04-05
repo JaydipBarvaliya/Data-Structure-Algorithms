@@ -33,27 +33,24 @@ class Solution {
 class Solution {
     
     public List<Integer> inorderTraversal(TreeNode root) {
-
+        
         Stack<TreeNode> stack = new Stack();
         List<Integer> list = new ArrayList();
-
-        TreeNode curr = root;
-
+        
         // curr != null --> this condition added so that we can enter in the while loop first time, then there is no use
-        //  of this condition
-
-        while(curr != null || !stack.isEmpty()){
-
-            while(curr!=null){
-                stack.push(curr);
-                curr = curr.left;
+        // of this condition 
+        
+        while(root != null || !stack.isEmpty()){
+            
+            while(root!=null){
+                stack.push(root);
+                root = root.left;
             }
-
-            curr = stack.pop();
-            list.add(curr.val);
-            curr = curr.right;
+            
+            root = stack.pop();
+            list.add(root.val);
+            root = root.right;
         }
-
         return list;
     }
 }
