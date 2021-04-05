@@ -15,6 +15,8 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+
+//first resolve 1st level then we go to next level and so on, 
 public class Solution {
 
     public List<ListNode> binaryTreeToLists(TreeNode root) {
