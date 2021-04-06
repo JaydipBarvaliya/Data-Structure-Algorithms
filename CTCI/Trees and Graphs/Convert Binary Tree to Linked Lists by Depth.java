@@ -16,7 +16,7 @@
  * }
  */
 
-//first resolve 1st level then we go to next level and so on, 
+//level by level traversar 
 public class Solution {
 
     public List<ListNode> binaryTreeToLists(TreeNode root) {
