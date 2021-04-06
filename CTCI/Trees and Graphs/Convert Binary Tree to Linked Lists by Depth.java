@@ -16,7 +16,7 @@
  * }
  */
 
-//level by level traversar 
+//level by level traversar -- BFS
 public class Solution {
 
     public List<ListNode> binaryTreeToLists(TreeNode root) {
@@ -61,4 +61,35 @@ public class Solution {
 
         return mainList;
     }
+}
+
+ // Recursive Solution -- DFS
+public class Solution {
+
+    List<ListNode> result = new ArrayList();
+
+    public List<ListNode> binaryTreeToLists(TreeNode root) {
+           return dfs(root, 0);
+    }
+
+    List<ListNode> dfs(TreeNode root, int level){
+
+    if(root==null) return result;
+
+    if(level == result.size()){
+        result.add(new ListNode(root.val));
+    }else{
+        ListNode head = result.get(level);
+
+        while(head.next != null){
+            head = head.next;
+        }
+        head.next = new ListNode(root.val);
+    }
+
+    dfs(root.left, level+1);
+    dfs(root.right, level+1);
+
+    return result;
+  }
 }
