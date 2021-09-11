@@ -44,3 +44,29 @@
         }
 	return head;
 }	
+
+
+//adding data in Hashset and then check if element is exist or not and based on that iterate entire Linked List--> GFG website
+class Solution
+{
+    
+ HashSet<Integer> visited = new HashSet<Integer>();
+
+    public Node removeDuplicates(Node head) 
+    {
+     
+     Node pre  = head;
+     Node curr = head;
+     
+     while(curr != null){
+         if(visited.contains(curr.data)){
+             pre.next = curr.next;
+         }else{
+             visited.add(curr.data);
+             pre = curr;
+         }
+         curr = curr.next;
+     }
+     return head;
+    }
+}
