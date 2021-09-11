@@ -25,3 +25,18 @@ public ListNode reverseList(ListNode head) {
          }
         return reversed; 
     }
+
+//changing internal links
+public ListNode reverseList(ListNode cur) {
+
+        ListNode pre = null;
+        ListNode forw;
+
+        while(cur!=null){
+            forw = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = forw;
+        }
+      return pre;
+}
