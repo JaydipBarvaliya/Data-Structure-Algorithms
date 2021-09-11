@@ -86,3 +86,27 @@ class Solution {
         
         }
 }
+
+
+// In this way we are directly compare both end and increasing them in respective order as forward and backward
+class Solution {
+    ListNode front;
+    public boolean isPalindrome(ListNode head) {
+        
+        front = head;
+        return recursion(head);
+    }
+    
+    public boolean recursion(ListNode current){
+        
+        if(current == null) return true;
+        
+        if(recursion(current.next)){
+            if(current.val != front.val) return false;
+            front = front.next;
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
