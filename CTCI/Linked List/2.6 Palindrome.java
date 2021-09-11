@@ -37,3 +37,52 @@ class Solution {
     return true;
     }
 }
+
+//Reverse the second half and then compare it to first..here we have made many mistake while doing reversing ...
+//there are many other ways to do revering in easy manner
+
+
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        
+        if (head.next == null) return true;
+        
+        ListNode mid = middle(head);
+        ListNode rev = reversing(mid.next);
+
+        boolean flag = true;
+        while(flag && rev != null){
+            if(head.val != rev.val) flag = false;
+            head = head.next;
+            rev = rev.next;
+        }
+            return flag;
+    }
+
+    
+    public ListNode middle(ListNode head) {
+            
+            ListNode slow = head;
+            ListNode fast = head;
+            
+            while(fast.next!=null && fast.next.next!=null){
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+            
+            return slow;
+        }
+    
+    public ListNode reversing(ListNode curr) {
+         
+             ListNode pre = null;
+            while(curr != null){
+                ListNode temp = curr.next;
+                curr.next = pre;
+                pre = curr;
+                curr = temp;
+            }
+        return pre;
+        
+        }
+}
