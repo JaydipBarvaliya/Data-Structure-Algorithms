@@ -1,6 +1,3 @@
-// { Driver Code Starts
-// Initial Template for Java
-
 import java.io.*;
 import java.util.*;
 
@@ -24,10 +21,8 @@ class GFG{
                 System.out.println("NO");
         }
     }
-}// } Driver Code Ends
+}
 
-
-// User function Template for Java
 
 class Solution{
     static int equalPartition(int len , int items[]){
@@ -66,6 +61,4 @@ class Solution{
 
 		return matrix[items.length][totalSum];
 	}
-	
-	
 }
