@@ -1,6 +1,7 @@
 class Solution{
     public int cutRod(int price[], int totalLenOfRod) {
         
+        //Actually price.length and totalLenOfRod both are equal....but to intact the actual concept we define as below
         int matrix[][] = new int[ price.length+1 ][ totalLenOfRod+1 ];
 
         for(int i=1; i<price.length+1; i++){
