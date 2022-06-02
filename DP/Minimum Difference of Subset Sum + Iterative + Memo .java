@@ -28,22 +28,18 @@ class Solution{
         
         int totalSum = 0;
         for(int summer: arr) totalSum += summer;
-
-
         
         List<Integer> list  = isSubsetSum(arr, totalSum);
-
-
         
         int minDiff = Integer.MAX_VALUE;
         for(int sum1: list)
             if( (totalSum - (2*sum1)) < minDiff) minDiff = totalSum - (2*sum1);
-
-
-
         
         return minDiff;
 	} 
+
+	
+	
 	
 	static List<Integer> isSubsetSum(int items[], int totalSum){
 		
@@ -51,6 +47,7 @@ class Solution{
 
 
 
+		
 		for (int col=0;  col<=totalSum;  col++)
 			matrix[0][col] = false;
 		for (int row=0;  row<items.length+1;  row++)
