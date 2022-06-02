@@ -5,17 +5,19 @@ class Solution{
 
         for(int i=1; i<price.length+1; i++){
             
-            int currentInchCutOfItem  =  i;
+            int inchOfCurrItem  =  i;
             int currentValue   = price[i-1];
             
             for(int j=1; j<totalLenOfRod+1; j++){
                 
-                if(currentInchCutOfItem <= j){
+                if(inchOfCurrItem <= j){
                    matrix[i][j] = Math.max( matrix[i-1][j] ,
-                                            matrix[i][j-currentInchCutOfItem] + currentValue );
+                                            matrix[i][j-inchOfCurrItem] + currentValue );
                 }else{
                    matrix[i][j] =  matrix[i-1][j];
                 }
             }
         }
         return matrix[price.length][totalLenOfRod];
+    }
+}
