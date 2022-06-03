@@ -1,7 +1,4 @@
-
-
-//See this image for more visualization DP/LCS Recursive.png
-
+//See this image for more visualization DP/Longest common subsequence Recursive.png
 
 public class LongestCommonSubsequence{
 
