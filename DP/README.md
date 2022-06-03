@@ -10,4 +10,7 @@ PS: Top down and Bottom up is decided by the essence of methodology and not by w
 # Longest Common Subsequence Recursive Visualization
 ![alt text](https://github.com/JaydipBarvaliya/DS_ALGO/blob/80eb53241a30053b43381b1a753ae68079aceabc/DP/Longest%20common%20subsequence%20Recursive.png?raw=true)
 
-
+-----
+# Print any 2D matrix
+for (int[] row : matrix)
+		    System.out.println(Arrays.toString(row));
