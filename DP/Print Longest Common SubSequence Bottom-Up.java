@@ -39,7 +39,7 @@ int lcs( char[] X, char[] Y, int m, int n ){
     n = matrix[0].length-1;
     List<Character> list = new ArrayList<Character>();
     
-    while(m>0){
+    while(m>0 && n>0){
         
         if(X[m-1] == Y[n-1]){
             list.add(0, X[m-1]);
@@ -52,8 +52,6 @@ int lcs( char[] X, char[] Y, int m, int n ){
         }else if(matrix[m-1][n] < matrix[m][n-1]){
             n--;
         }
-        
-        if(n==0) break;
     }
     
     for(Character ele : list) System.out.println(ele);
