@@ -5,7 +5,7 @@ I have curated these list from famouse blogs, youtube etc. For Brushing up the b
 
 
 ### GEEKS FOR GEEKS (Topic Wise)
-- :computer: [Array](src/com/geeksforgeeks/array)
+- :computer: [Array](geeksforgeeks/array)
 - :rowboat: [Dynamic Programming](src/com/geeksforgeeks/dynamicProgramming)
 - :chart_with_upwards_trend: [Graph](src/com/geeksforgeeks/graph)
 - :ship: [Heap](src/com/geeksforgeeks/heap)
