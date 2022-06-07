@@ -12,11 +12,11 @@ PS: Top down and Bottom up is decided by the essence of methodology and not by w
 
 -----
 # Print any 2D matrix
-for (int[] row : matrix)
-		    System.out.println(Arrays.toString(row));
+for (int[] row : matrix) <br />
+System.out.println(Arrays.toString(row));
 
 -----
 # Reverse a string in efficient way
-StringBuilder reverseStr = new StringBuilder();
+StringBuilder reverseStr = new StringBuilder(); <br />
 reverseStr.append(str).reverse();
         
