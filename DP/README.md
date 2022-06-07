@@ -18,4 +18,5 @@ for (int[] row : matrix)
 -----
 # Reverse a string in efficient way
 StringBuilder reverseStr = new StringBuilder();
-        reverseStr.append(str).reverse();
+reverseStr.append(str).reverse();
+        
