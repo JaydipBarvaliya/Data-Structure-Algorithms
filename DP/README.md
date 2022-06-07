@@ -12,7 +12,7 @@ PS: Top down and Bottom up is decided by the essence of methodology and not by w
 
 -----
 # Print any 2D matrix
-for (int[] row : matrix) <br />
+for (int[] row : matrix) <br /> -----
 System.out.println(Arrays.toString(row));
 
 -----
