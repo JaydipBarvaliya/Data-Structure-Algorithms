@@ -26,6 +26,7 @@ class Solution{
                  left =  matrix[i][k];
             }else{
                  left =  solve(matrix, str, i, k);
+                 matrix[i][k] = left;
             }
 
 
@@ -34,6 +35,7 @@ class Solution{
                 right = matrix[k+1][j];
             }else{
                 right = solve(matrix, str, k+1, j);
+                matrix[k+1][j] = right;
             } 
             
             int tempAns =  1 + left + right;
