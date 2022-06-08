@@ -12,10 +12,23 @@ PS: Top down and Bottom up is decided by the essence of methodology and not by w
 
 -----
 # Print any 2D matrix
+```java
 for (int[] row : matrix) <br />
-System.out.println(Arrays.toString(row));
+    System.out.println(Arrays.toString(row));
+```
 
 -----
 # Reverse a string in efficient way
+```java
 StringBuilder reverseStr = new StringBuilder(); <br />
 reverseStr.append(str).reverse();
+```
+
+-----
+# Initialize any matrix with any specific value ( Here it is -1)
+
+```java
+int[][] matrix = new int[len][len]; <br />
+for (int[] row : matrix) <br />
+    Arrays.fill(row, -1);     
+```
