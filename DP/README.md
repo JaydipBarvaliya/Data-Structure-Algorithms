@@ -41,6 +41,8 @@ for (int[] row : matrix)
 char[] ch = str.toCharArray();
 ```
 
+-----
+# == :vs: equals()
 
 If you are working with the Character class and want to compare two char values, then use equals() method
 
