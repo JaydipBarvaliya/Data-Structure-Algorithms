@@ -1,3 +1,4 @@
+// This approach is correct however, as per the GFG there is tons of constraints has been given so we need to mold this code as per those constraints
 class Solution{
     
     static int countWays(int N, String str){
