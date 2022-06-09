@@ -35,4 +35,9 @@ int[][] matrix = new int[len][len];
 for (int[] row : matrix)
     Arrays.fill(row, -1);     
 ```
+-----
+# String to Character Array
+```java
+char[] ch = str.toCharArray();
+```
 
