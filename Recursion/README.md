@@ -11,3 +11,11 @@ On the other hand, Hashset only handle unique but can't handle ordering whereas 
 ```java
  new ArrayList<String>(set)
 ```
+
+
+-----
+# Remove last character of a StringBuilder
+```java
+ sb.setLength(sb.length() - 1);
+```
+
