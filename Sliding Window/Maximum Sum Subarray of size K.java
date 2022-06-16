@@ -1,23 +1,20 @@
-public class Main {
-    public static void main(String[] args) {
+class Solution{
+    static long maximumSumSubarray(int k, ArrayList<Integer> list, int n){
         
-        char[] arr = new char[]{1,2,3,4,5,6,7,10};
-        int i,j,k,sum,maxsum;
-            i=j=sum=maxsum=0;
-        int k=3;
+    long max=0;
+    int i=0;
+    
+    for(i=0; i<k; i++) max = max + list.get(i);
+    
+    long sumOfPreWin = max;
+    
+    while(i<n){
         
-        while(j<arr.length){
-                
-                sum = sum + arr[j];    
-                if(j-i+1 == k){
-                    if(sum>maxsum){
-                        maxsum = sum;
-                    }
-                    sum = sum - arr[i];    
-                    i++;
-                }
-            j++;
-        }
-        System.out.println(maxsum);
+        sumOfPreWin = sumOfPreWin  + list.get(i) - list.get(i-k);
+        max = Math.max(sumOfPreWin, max);
+        i++;
+    }
+    
+    return max;
     }
 }
