@@ -4,17 +4,13 @@ class Solution {
         
         ArrayList<Integer> result  = new ArrayList<Integer>();
         if(k==1){
-            
             for(Integer ele : arr) result.add(ele);
             return result;        
         } 
         
         int i=0;
         int j=0;
-        int max = Integer.MIN_VALUE;
-        
         Deque<Integer> q = new LinkedList<>();
-        
         
         while(j<n){
             
