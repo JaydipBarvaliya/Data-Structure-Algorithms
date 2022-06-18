@@ -1,19 +1,19 @@
 class Solution {
 
-    int search(String pat, String str) {
+    int search(String pattern, String str) {
         
         int i=0;
         int j=0;
         int ans=0;
         int n = str.length();
-        int k = pat.length();
+        int k = pattern.length();
         Map<Character, Integer> map = new HashMap<Character, Integer>(); 
         
         //popluate all "patt" into map
         
         for(int index=0; index<k; index++){
             
-            Character curr = pat.charAt(index);
+            Character curr = pattern.charAt(index);
             
             if(!map.containsKey(curr)){
                 map.put(curr, 1);
