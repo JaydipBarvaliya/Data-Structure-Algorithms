@@ -1,24 +1,3 @@
-import java.io.*;
-import java.util.*;
-class GFG {
-	public static void main (String[] args) {
-	    
-		Scanner sc=new Scanner(System.in);
-		int t=sc.nextInt();
-		
-		sc.nextLine();
-		while(t-->0){
-      
-		   String S[]=sc.nextLine().split(" ");
-		   String X=S[0];
-		   String Y=S[1];
-		   
-		   System.out.println(new Solution().shortestCommonSupersequence(X, Y, X.length(), Y.length()));
-		}
-	}       
-}
-
-
 class Solution{
   
     public static int shortestCommonSupersequence(String X, String Y, int m, int n){
