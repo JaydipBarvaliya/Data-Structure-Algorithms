@@ -52,11 +52,32 @@ with primitive char values, you can simply use the == equal operator
 
 
 -----
-# If given key is exist in the map then it will return corrosponding value otherwise it return the default given value by us here it's 500
+# getOrDefault method in HashMap
+If given key is exist in the map then it will return corrosponding value otherwise it return the default given value by us here it's 500
 
 ```java
               //(key, defaultValue)
 map.getOrDefault(200, 500) + 1  
 ```
+
 -----
+# HashSet :vs: TreeSet
+In many permutations/subset generation problems question demand for unique and sorted elements in it, so for that we can use TreeSet which follow both of these properties.
+On the other hand, Hashset only handle unique but can't handle ordering whereas TreeSet can handle ordering of elements.
+```java
+ TreeSet<String> set = new TreeSet<String>();
+``` 
+
+-----
+# Convert TreeSet to List
+```java
+ new ArrayList<String>(set)
+```
+
+
+-----
+# :x:	Remove last character of a StringBuilder
+```java
+ sb.setLength(sb.length() - 1);
+```
 
