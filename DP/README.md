@@ -47,3 +47,14 @@ char[] ch = str.toCharArray();
 If you are working with the Character class and want to compare two char values, then use equals() method
 
 with primitive char values, you can simply use the == equal operator
+
+
+-----
+# If given key is exist in the map then it will return corrosponding value otherwise it return the default given value by us here it's 500
+
+```java
+              //(key, defaultValue)
+map.getOrDefault(200, 500) + 1  
+```
+-----
+
