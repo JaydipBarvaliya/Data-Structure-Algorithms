@@ -1,20 +1,3 @@
-import java.io.*;
-import java.util.*; 
-class GFG{
-    public static void main(String args[]) throws IOException { 
-        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(read.readLine());
-        
-        while(t-- > 0){
-            int n = Integer.parseInt(read.readLine());
-            String str = read.readLine().strip();
-            Solution ob = new Solution();
-            long ans = ob.minDeletions(str, n); 
-            System.out.println(ans);
-        }
-    } 
-}
-
 class Solution { 
     int minDeletions(String str, int lenOfStr){
         
@@ -43,6 +26,4 @@ class Solution {
         }
     	return matrix[m][n];
       }
-      
-      
 } 
