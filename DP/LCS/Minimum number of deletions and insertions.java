@@ -1,20 +1,3 @@
-import java.io.*;
-import java.util.*;
-class GfG{
-    public static void main(String args[])
-        {
-            Scanner sc = new Scanner(System.in);
-            int t = sc.nextInt();
-            while(t-->0)
-                {
-                    String s1 = sc.next();
-                    String s2 = sc.next();
-                    Solution ob = new Solution();
-                    System.out.println(ob.minOperations(s1,s2));
-                }
-        }
-}
-
 class Solution{
 	public int minOperations(String str1, String str2){ 
 	    
