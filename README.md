@@ -57,7 +57,9 @@ If given key is exist in the map then it will return corrosponding value otherwi
 
 ```java
               //(key, defaultValue)
-map.getOrDefault(200, 500) + 1  
+map.getOrDefault(200, 500) + 1
+
+map.put(str.charAt(j), map.getOrDefault(str.charAt(j), 1) + 1)
 ```
 
 -----
