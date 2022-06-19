@@ -1,42 +1,40 @@
-public class Main {
-    public static void main(String[] args) {
-        
-        String str = "aabbcc";
-        char[] arr = str.toCharArray();
-        int longest=0;
-        int i=0;
-        int j=0;
-        int k=3;
+class Solution {
+    public int longestkSubstr(String str, int k) {
         
         Map<Character, Integer> map = new HashMap<Character, Integer>();
-        StringBuilder sb = new StringBuilder();
+        int n= str.length();
+        int i=0;
+        int j=0;
+        int max=-1;
         
-        while(j<arr.length) {
-                if(map.get(arr[j]) == null){
-                    map.put(arr[j], 1);
-                }else{
-                    map.put(arr[j], map.get(arr[j])+1);
-                }
+        while(j<n){
             
-                if(map.size() == k){
-                    if(j-i+1 > longest){
-                        longest = j-i+1;
-                        sb.replace(0, sb.length(), str.substring(i,j+1));
-                    }
-                }
+            //If value is exist then fetch + 1 and update into map
+            //if value is not exist then take default value as 0 + 1 and add into map
 
-                if(map.size() > k){
-                     while(map.size() < k){
-                         map.put(arr[i], map.get(arr[i])-1);
-                         i++;
-                         
-                         if(map.get(arr[i]) == 0){
-                             map.remove(map.get(arr[i]));
-                         }
-                     }
+            map.put(str.charAt(j), map.getOrDefault(str.charAt(j), 0) + 1);
+            
+            if(map.size() < k){
+                j++;
+                
+                
+            }else if(map.size() == k){
+                
+                max = Math.max(max, j-i+1);
+                j++;
+                
+            }else if(map.size() > k){
+                
+                 while (map.size() > k) {
+                     
+                    map.put(str.charAt(i), map.get(str.charAt(i)) - 1);
+                    if(map.get(str.charAt(i)) == 0) map.remove(str.charAt(i));
+                    i++;
                 }
-            j++;
+                
+                j++;
+            }
         }
-        System.out.println(sb);
+        return max;
     }
 }
