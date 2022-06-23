@@ -4,7 +4,11 @@ class Sol{
         int row=0;
         int col=m-1;
         
-        while(row>=0 && row<n && col>=0 && col<m){
+        //if we add following condition in below statment && col<m
+        //but we actuallu not requierd it as col is always decreased..so it will never
+        //hit this condition...
+        
+        while(row>=0 && row<n && col>=0){  
             
             if(arr[row][col] == target){
                  return 1;  
@@ -18,4 +22,3 @@ class Sol{
         }
         return 0;
     }
-}
