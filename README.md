@@ -83,3 +83,9 @@ On the other hand, Hashset only handle unique but can't handle ordering whereas 
  sb.setLength(sb.length() - 1);
 ```
 
+
+-----
+# Convert array to list ( Array of int to List of Integer)
+```java
+ List<Integer> subList =  Arrays.stream(edges[i]).boxed().collect(Collectors.toList());
+```
