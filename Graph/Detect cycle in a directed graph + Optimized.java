@@ -5,7 +5,7 @@ class Solution {
       boolean[] dfsvisited = new boolean[V];
       //it depecits that if a node visit in current cycle or not 
       //if it is visited in current cycle then there is cycle otherwise not
-      //
+      // Check following image in the current directory which clear all your doubt Detect cycle in a directed graph + Optimized.jpg
       
       
       Arrays.fill(visited, false);
