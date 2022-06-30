@@ -1,3 +1,7 @@
+//The main reason for this optimization is that at every step we only look the 2 previous steps...so we do not require all the steps which is back of these two back steps.
+//So we only try to track only two previous step using variable....
+
+
 class Solution {
 
         int climbStairs(int n) {
