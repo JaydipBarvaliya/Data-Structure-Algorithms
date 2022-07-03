@@ -89,3 +89,10 @@ On the other hand, Hashset only handle unique but can't handle ordering whereas 
 ```java
  List<Integer> subList =  Arrays.stream(edges[i]).boxed().collect(Collectors.toList());
 ```
+
+-----
+# Clone & Sort Array
+```java
+int[][] sorted = intervals.clone();
+Arrays.sort(sorted, (a,b) -> Integer.compare(a[0], b[0]));
+```
