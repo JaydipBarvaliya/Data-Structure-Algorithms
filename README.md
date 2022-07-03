@@ -96,3 +96,11 @@ On the other hand, Hashset only handle unique but can't handle ordering whereas 
 int[][] sorted = intervals.clone();
 Arrays.sort(sorted, (a,b) -> Integer.compare(a[0], b[0]));
 ```
+
+
+-----
+# Convert ArrayList to Array
+```java
+int[][] arr = new int[list.size()][];
+		return list.toArray(arr);
+```
