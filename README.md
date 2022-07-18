@@ -104,3 +104,8 @@ Arrays.sort(sorted, (a,b) -> Integer.compare(a[0], b[0]));
 int[][] arr = new int[list.size()][];
 		return list.toArray(arr);
 ```
+
+-----
+# Short-Circuit
+In Java || has a short-circuit, the right hand side will not be evaluated if the left hand side is true
+-----
