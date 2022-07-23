@@ -53,7 +53,7 @@ with primitive char values, you can simply use the == equal operator
 
 -----
 # getOrDefault method in HashMap
-If given key is exist in the map then it will return corrosponding value otherwise it return the default given value by us here it's 500
+If given key is exist in the map then it will return corresponding value otherwise it return the default given value by us here it's 500
 
 ```java
               //(key, defaultValue)
