@@ -109,3 +109,13 @@ int[][] arr = new int[list.size()][];
 # Short-Circuit
 In Java || has a short-circuit, the right hand side will not be evaluated if the left hand side is true
 -----
+
+
+
+
+# Print HashMap
+```java
+map.entrySet().forEach(entry -> {
+      System.out.println(entry.getKey() + " " + entry.getValue());
+});
+```
