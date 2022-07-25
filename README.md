@@ -119,3 +119,8 @@ map.entrySet().forEach(entry -> {
       System.out.println(entry.getKey() + " " + entry.getValue());
 });
 ```
+
+# Create Array of lists -> adjecency matrix of graph
+```java
+ArrayList<Integer>[] adj = new ArrayList[numCourses];
+```
