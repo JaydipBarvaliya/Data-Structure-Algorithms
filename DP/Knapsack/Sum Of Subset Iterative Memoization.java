@@ -1,6 +1,5 @@
 class Solution{
-
-
+	
     static Boolean isSubsetSum(int N, int items[], int totalSum){
      boolean matrix[][] = new boolean[items.length + 1][totalSum + 1];
 
