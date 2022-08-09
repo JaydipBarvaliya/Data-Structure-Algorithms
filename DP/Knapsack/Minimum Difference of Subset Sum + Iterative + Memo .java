@@ -5,7 +5,7 @@ class Solution {
         int totalSum = 0;
         for (int summer: arr) totalSum += summer;
 
-        List < Integer > list = isSubsetSum(arr, totalSum);
+        List <Integer> list = isSubsetSum(arr, totalSum);
 
         int minDiff = Integer.MAX_VALUE;
         for (int sum1: list)
@@ -17,7 +17,7 @@ class Solution {
 
 
 
-    static List < Integer > isSubsetSum(int items[], int totalSum) {
+    static List <Integer> isSubsetSum(int items[], int totalSum) {
 
         boolean matrix[][] = new boolean[items.length + 1][totalSum + 1];
 
@@ -44,7 +44,7 @@ class Solution {
             }
         }
 
-        List < Integer > list = new ArrayList < Integer > ();
+        List <Integer> list = new ArrayList <Integer>();
 
         boolean lastRow[] = matrix[items.length];
 
