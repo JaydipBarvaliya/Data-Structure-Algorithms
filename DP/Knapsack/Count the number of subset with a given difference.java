@@ -1,4 +1,4 @@
-//         Explaination 
+// Explaination 
 // Let sum of subset 1 be s1 and subset 2 with s2
 // s1 - s2 = diff (given)
 // s1 + s2=sum of array (logical)
