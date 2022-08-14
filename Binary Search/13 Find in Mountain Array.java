@@ -20,11 +20,8 @@ class Solution {
             while(start < end){
 
              int mid = start + (end-start)/2;
-                
-             int cur = mountainArr.get(mid);
-             int next = mountainArr.get(mid+1);
-             
-             if (next > cur) { // increasing
+                             
+             if (mountainArr.get(mid) < mountainArr.get(mid+1) ) { // increasing
                  start = mid+1;
              }else {
                  end = mid;
