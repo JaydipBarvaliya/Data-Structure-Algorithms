@@ -14,6 +14,6 @@
 	  if (arr[mid] == key) return arr[mid];
 	  else if (arr[mid] > key) end = mid - 1;
 	  else if (arr[mid] < key) end = mid + 1;
-	}
+ }
 
  return (mid - start < mid - end) ? start : end;
