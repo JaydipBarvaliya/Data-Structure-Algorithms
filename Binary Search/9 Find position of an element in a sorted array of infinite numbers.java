@@ -21,8 +21,9 @@ class Test{
 
     static int findPos(int arr[], int target){
 	    
-        int low = 0, high = 1;
-        int curr = arr[0];
+        int low = 0,
+	int high = 1;
+        int curr = arr[high];
 
         while (target > curr){
 
