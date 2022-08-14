@@ -19,12 +19,12 @@ class Test{
         return -1;
     }
 
-    static int findPos(int arr[],int key){
+    static int findPos(int arr[], int target){
 	    
         int low = 0, high = 1;
-        int val = arr[0];
+        int curr = arr[0];
 
-        while (key > val){
+        while (target > curr){
 
             low = high;     // store previous high
 
@@ -34,11 +34,11 @@ class Test{
             else
                 high = arr.length-1;
 	    		
-            val = arr[high]; // update new val
+            curr = arr[high]; // update new val
         }
  
         // at this point we have updated low and high indices, thus use binary search between them
-        return binarySearch(arr, low, high, key);
+        return binarySearch(arr, low, high, target);
     }
 	
 	
