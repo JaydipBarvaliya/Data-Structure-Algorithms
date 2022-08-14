@@ -23,9 +23,9 @@ class Test{
 	    
         int low = 0,
 	int high = 1;
-        int curr = arr[high];
+        int boundry  = arr[high];
 
-        while (target > curr){
+        while (boundry < target ){
 
             low = high;     // store previous high
 
@@ -35,7 +35,7 @@ class Test{
             else
                 high = arr.length-1;
 	    		
-            curr = arr[high]; // update new val
+            boundry  = arr[high]; // update new val
         }
  
         // at this point we have updated low and high indices, thus use binary search between them
