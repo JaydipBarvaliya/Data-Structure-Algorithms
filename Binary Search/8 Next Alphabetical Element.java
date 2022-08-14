@@ -11,7 +11,7 @@ class Solution {
            int mid = start + (end-start)/2;
            
            if(letters[mid] == target){
-               result = (mid + 1) % len;
+                result = (mid + 1) % len;
                 start = mid + 1;
            }
            else if(target < letters[mid]){
