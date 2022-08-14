@@ -5,7 +5,7 @@ class Sol{
         int col=m-1;
         
         //if we add following condition in below statment && col<m
-        //but we actuallu not requierd it as col is always decreased..so it will never
+        //but we actually not requierd it as col is always decreased..so it will never
         //hit this condition...
         
         while(row>=0 && row<n && col>=0){  
