@@ -1,25 +1,26 @@
 class Test{
    
-    static int binarySearch(int arr[], int l, int r, int x){
+    static int binarySearch(int arr[], int left, int right, int x){
 	    
 	    
-        if (r>=l){
+        if (right>=left){
 
-            int mid = l + (r - l)/2;
-
+            int mid = left + (right - left)/2;
+		
             if (arr[mid] == x)
                 return mid;
 
             if (x < arr[mid])
-                return binarySearch(arr, l, mid-1, x);
+                return binarySearch(arr, left, mid-1, x);
 
 	    if (x > arr[mid])
-		return binarySearch(arr, mid+1, r, x);
+		return binarySearch(arr, mid+1, right, x);
         }
         return -1;
     }
 
     static int findPos(int arr[],int key){
+	    
         int low = 0, high = 1;
         int val = arr[0];
 
@@ -39,6 +40,10 @@ class Test{
         // at this point we have updated low and high indices, thus use binary search between them
         return binarySearch(arr, l, h, key);
     }
+	
+	
+	
+	
 	
 	
 	
