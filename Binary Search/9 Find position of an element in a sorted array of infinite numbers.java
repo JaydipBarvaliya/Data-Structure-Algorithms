@@ -38,7 +38,7 @@ class Test{
         }
  
         // at this point we have updated low and high indices, thus use binary search between them
-        return binarySearch(arr, l, h, key);
+        return binarySearch(arr, low, high, key);
     }
 	
 	
