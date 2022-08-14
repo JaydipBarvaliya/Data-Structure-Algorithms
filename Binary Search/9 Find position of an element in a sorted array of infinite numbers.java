@@ -24,7 +24,7 @@ class Test{
         int low = 0, high = 1;
         int val = arr[0];
 
-        while (val < key){
+        while (key > val){
 
             low = high;     // store previous high
 
