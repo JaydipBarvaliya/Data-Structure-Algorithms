@@ -14,7 +14,7 @@ class Solution {
         int left  = fun(root.left);
         int right = fun(root.right);
         
-        max = Math.max(max, left+right);
+        max = Math.max(max, left + right);
         
         return 1 + Math.max(left, right);
     }
