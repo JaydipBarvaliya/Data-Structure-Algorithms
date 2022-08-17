@@ -16,5 +16,5 @@
 	  else if (arr[mid] < key) end = mid + 1;
  }
 
- return (arr[mid] - arr[start] < arr[mid] - arr[end]) ? arr[start] : arr[end];
+ 
  return (arr[mid] - arr[start] < arr[mid] - arr[end]) ? arr[start] : arr[end];
