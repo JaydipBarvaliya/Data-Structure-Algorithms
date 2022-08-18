@@ -1,17 +1,18 @@
 // Brute
 class Solution {
-    public boolean wordBreak(String s, List<String> wordDict) {
-        // put all words into a hashset
-        Set<String> set = new HashSet<>(wordDict);
-        return wb(s, set);
+    public boolean wordBreak(String str, List<String> dictonary) {
+
+        // put all words into a hashset In order to get rid of duplicates
+
+        Set<String> wordDict = new HashSet<>(dictonary);
+        return recurse(str, wordDict);
     }
-    private boolean wb(String s, Set<String> set) {
-        int len = s.length();
-        if (len == 0) {
+    private boolean recurse(String str, Set<String> wordDict) {
+        if (str.length() == 0) {
             return true;
         }
-        for (int i = 1; i <= len; ++i) {
-            if (set.contains(s.substring(0, i)) && wb(s.substring(i), set)) {
+        for (int i = 1; i <= str.length(); ++i) {
+            if (wordDict.contains(str.substring(0, i)) && recurse(str.substring(i), wordDict)) {
                 return true;
             }
         }
@@ -24,11 +25,13 @@ class Solution {
 
 
 // Recursion + Memo
+// In this approach we do reverse engineering..rather then checking every letter & substring of string into word dictionary, we can check if string is 
+// starting with the word of word dictionary --> which means start iterating word dictionary instead of string 
 
 public class Solution {
     public boolean wordBreak(String str, List<String> wordDict) {
         
-        HashMap<String, Boolean> map= new HashMap<>();
+        HashMap<String, Boolean> map = new HashMap<>();
         
         return canConstruct(str, new HashSet<>(wordDict), map);
     }
@@ -37,6 +40,17 @@ public class Solution {
 private boolean canConstruct(String str, Set<String> wordDict, HashMap<String,Boolean> map) {
         
         if(str.isEmpty()) return true;
+
+        //this is specially for the case where same str already exist in the map
+        //str = leetcodeleet
+        //dic [leet, code, leet]
+        // map [leet: true,
+        //      code: true
+        // ]
+
+        //canConstruct("leet",  wordDict, map) --> now in this case "leet" is already present in the map so we do not need to check further....even we do
+        //not need to break the "leet" and checking it further....everything will be the same if we proceed
+
         if(map.containsKey(str)) return map.get(str);
 			
         
