@@ -1,19 +1,24 @@
 class Solution {
     public List<String> findWords(char[][] matrix, String[] words) {
+      
         
-
         List<String> list = new ArrayList();
         
         for(String word: words){
             outerloop:
              for(int i=0; i<matrix.length; i++){
+
               for(int j=0; j<matrix[0].length; j++){
+
                 if(matrix[i][j] != word.charAt(0)) continue;
+
                    boolean isExist = dfs(matrix, i, j, word, 0);
+
                    if(isExist==true){
                       list.add(word);
                       break outerloop;
                    } 
+
               }
             }
        }

@@ -1,38 +1,83 @@
-telephonic interview -> Behavior + DSA preparation
+
+https://www.cleverism.com/102-behavioral-interview-questions-including-answers/#_blank
 
 
+
+ deliver result
+
+
+ 1) give me time when you deliver result/project... under tight deadline..what was the impact..what was the final outcome
+
+ cisg-connected with exchequer and komal left the org suddenly because of some personal reason and as I was dependent I need to taken care of all the dependencies..and finally after tons of hard work and some advices from seniors I delivered it before the time. and I did that and awarded by the org and it leaves the mark to the people that HPEL can also delivered the project before timeline. it taught me a great lesson then never be dependent...learn learn and learn to refrain from all those dependencies.
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2) about a time when you anticipated significant obstaceles to achieve goal...what was those obstacles....how you overcomed them...
+let them know that in that case also how you delivered result........talk about those professional obstacles...hindrence to achieve a goal..walk through the obstacle....steps to overcome those obstacle..let them know the result....
+
+
+
+
+I knew that cloud services will comes in to the picture as org is moving most of the projects to the cloud and knew that some of the interconncted project of my current project is deployed in cloud. so knew this in advanced so strated working on AWS certfication for future easiness.
+Development certificate : it will help me in mu current development that whatever the code i'm writing can this work on cloud..even I get to know the more optimized way before deep dive into sprint....direct development into very optimistic way and same apply for architecture style....and for that also I have started working on my AWS certificatied solution architect....and that really helped in while product deployment...so this was the ancipated obstacles...it doesn't look that much big obstacle..but I know that..how much time it saved and how this learnig has driven the development in very optimistic way...and also finally product was deployed with the help of DevOps Teams...and this aws has caught my attenetion that level that I started to taking interest in DevOps tool and learning and that is why I have worked as a DevOps Engineer in Sunflower Lab
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 
- virtual---video interview -1 ahour...amazonian engineer...
 
- 2 aspect ..behavior(1 leadership principle -- deliver result) + 
- 
+3) Tell me about a time not only achive a goal...but exceed expectation..how you did that...
 
- deliver result --> 
- give me time when you deliver result/project... under tight deadline..what was the impact..what was the final outcome
+server got overloaded by customer multiple item code query because of code complexness and therefore suddenly after the third day we got many mail regarding these issue...developed typeahead which can also work with internal framework mosaic and in very smoooth way...issue resolves...beyond expectation in this scenario is to integration of twitter typeahead with our own internal buggy framework...appriciated by team and the mosaic team and afterwards it was adopted by the mosaic component
 
- tell me about a time..signitficati anticipate obstacelke to achieve goal...what obstacle....how you overcomed them
- talk about obstacle...hindrence to achieve a goal..walk the through the obstacle....stepas to overcome those obstacle..
- let them know the result....knowing what you know now...professional obstacle....
-
-tell me about a time not only achive a goal...but exceed expectation..how you did that...
-
-a time when you or a team ,at half way to the goal...and realize that something wrong....not a right goal...unitended consequnces,,,
-how did you change up your mindset..how did i work through all those stuff...
+---------------------------------------------------------------------------------------------------------
 
 
-give me a example  of goal or a mission which is not ahciveable but you dit it...how you and your team achived it..
 
-what was it and how does help us to achive is...
+4) A time when you or a team, at half way to the goal...and realize that something is wrong....not a right goal...unitended consequnces ...how did you change up your mindset........how did you work through all those stuff........
+
+introdcution of flyway
+introdcution of checkstyle
+introdcution of test driven development ( half way introdcution can really hinder my sprint profile and it even extend project deadline...)
+even writtern new test cases for the controller and services can also increase and create new bug fixer work and eventually it can also increase....so to fix the issue I found that it's not really extens the deadline but it is also generating the pressure to write those test cases I must have the clear knowledge of Mockito or Junit is working and how can I throughly implement it)
+---------------------------------------------------------------------------------------------------------
 
 
-STAR METHOD DEFINED
-STAR stands for:
 
-Situation. What was the situation you or your previous employer faced?
-Task. What tasks were involved?
-Action. What actions did you take?
-Results. What were the results of those actions?
+5) give me a example  of goal or a mission which is not achievable but you dit it...how you and your team achived it.. what was it and how does help us to achieve is...
+
+DevOps style example.....
+
+
+
+
+migration of databases without affecting the timeline because it was live database and touching live databse may create tons of issue and it will never be reversable when the DATA term comes into the picture. to get rid of future unknown and never seen issue ... we have perform multiple POC and tons of testing in local...even the same things had been performed in the cloud to check things works in every case.
+
+challanges :
+
+stackholder do not wants any type of downtime...
+datalose is not bearable...
+even new replica must be protected in a same way as existing db is protected...no compromised during migration...not data breach over migration
+replica must be tested for the scalable and also high available...
+
+
+used straregy: explain them multiple migration mechanisam for normal deployemt
+rolling with downtime 
+rolling with additional bateches
+blue green --> USED by use during the db migration ( 10% - 90 %)
+
+
+finally the task was achived by us....
+
+
+
+
+after tons of technical meeting and tons of techical jargons we finally did the database migration....
+
+
+
+
+
+------------------------------------------------------------------------------------------------------
+
 
 
 

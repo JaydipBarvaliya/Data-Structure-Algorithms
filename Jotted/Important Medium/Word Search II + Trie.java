@@ -5,8 +5,6 @@ class TrieNode {
 }
 
 
-
-
 class Solution {
     
     
@@ -33,6 +31,8 @@ class Solution {
       for (Character letter : word.toCharArray()) {
 
             if (node.children.containsKey(letter)) {
+              
+               //this assginment defined that we traverse 1 level down in trie 
               node = node.children.get(letter);
             } else {
               TrieNode newNode = new TrieNode();
@@ -54,7 +54,7 @@ class Solution {
       for (int col = 0; col < board[0].length; ++col) {
           
         if (root.children.containsKey(board[row][col])) {
-          backtracking(row, col, root);
+          trieExplorer(row, col, root);
         }
       }
     }
@@ -63,7 +63,7 @@ class Solution {
   }
     
     
-public void backtracking(int i, int j, TrieNode parent){
+public void trieExplorer(int i, int j, TrieNode parent){
     
         if(i<0 || j<0 || i==this.board.length || j==this.board[0].length) return;
     
@@ -80,19 +80,19 @@ public void backtracking(int i, int j, TrieNode parent){
     
     
         if (j+1 != this.board[0].length && currNode.children.containsKey(this.board[i][j+1])) {
-            backtracking(i,     j+1,   currNode);
+            trieExplorer(i,     j+1,   currNode);
         }
 
         if (i+1 != this.board.length && currNode.children.containsKey(this.board[i+1][j])) {
-            backtracking(i+1,   j,     currNode);
+            trieExplorer(i+1,   j,     currNode);
         }
 
         if (j-1 != -1 && currNode.children.containsKey(this.board[i][j-1])) {
-            backtracking(i,     j-1,   currNode);
+            trieExplorer(i,     j-1,   currNode);
         }
 
         if (i-1 != -1 && currNode.children.containsKey(this.board[i-1][j])) {
-            backtracking(i-1,   j,     currNode);
+            trieExplorer(i-1,   j,     currNode);
         }
         
         this.board[i][j] = letter;
