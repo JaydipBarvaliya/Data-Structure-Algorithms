@@ -80,7 +80,7 @@ private boolean canConstruct(String str, Set<String> wordDict, HashMap<String,Bo
 
 
 
-// DP
+// DP -- Bottom up -- reverse for loop  
 
 class Solution {
     public boolean wordBreak(String str, List<String> wordDict) {
@@ -88,6 +88,8 @@ class Solution {
         
         int len = str.length();
         boolean dp[] = new boolean[len+1];
+
+        //len means we are considering entire string 
         dp[len] = true; 
         
         for(int i=len-1; i>=0; i--){

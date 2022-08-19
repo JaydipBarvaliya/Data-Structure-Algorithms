@@ -38,6 +38,7 @@ class Solution {
                             newList.add(newStr.trim());
                         }
                         
+                        //why we need put dp[i] in ArrayList<String>("HERE");  --> check jaydip has written exact reason for this in book
                         ArrayList<String> existingList = new ArrayList<String>(dp[i]);
                         existingList.addAll(newList);
                         
