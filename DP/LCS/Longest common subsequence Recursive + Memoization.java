@@ -1,10 +1,23 @@
-import java.util.*;
-import java.io.*;
-import java.lang.*;
-
-public class LongestCommonSubsequence{
-
-int lcs( int matrix[][], char[] X, char[] Y, int m, int n ){
+class Solution {
+    public int longestCommonSubsequence(String s1, String s2) {
+        
+        char[] X=s1.toCharArray();
+        char[] Y=s2.toCharArray();
+        int m = X.length;
+        int n = Y.length;
+        
+        
+        int matrix[][] = new int[ m+1 ][ n+1 ];
+            for (int[] row : matrix)
+                Arrays.fill(row, -1);
+        
+        return lcs(matrix, X, Y, m, n );
+        
+        
+    }
+    
+    
+    int lcs( int matrix[][], char[] X, char[] Y, int m, int n ){
   
   
 	if (m == 0 || n == 0) return 0;
@@ -19,26 +32,5 @@ int lcs( int matrix[][], char[] X, char[] Y, int m, int n ){
 	
 	return matrix[m][n];
 }
-
-
-
-public static void main(String[] args){
-	LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-	String s1 = "AGGTAB";
-	String s2 = "GXTXAYB";
-
-	char[] X=s1.toCharArray();
-	char[] Y=s2.toCharArray();
-	int m = X.length;
-	int n = Y.length;
-	
-	int matrix[][] = new int[ m+1 ][ n+1 ];
-    for (int[] row : matrix)
-            Arrays.fill(row, -1);
-            
-            
-
-	System.out.println("Length of LCS is" + " " + lcs.lcs(matrix, X, Y, m, n ) );
-}
-
+    
 }
