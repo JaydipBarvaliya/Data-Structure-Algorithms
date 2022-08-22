@@ -23,7 +23,7 @@ class Solution {
         }
         
         
-        int count = map.size();
+        int requiredChars = map.size();
         
         while(j<n){
             
@@ -34,7 +34,7 @@ class Solution {
             }
             
             if(map.get(lastChar) !=null && map.get(lastChar) == 0){
-                count--;   
+                requiredChars--;   
             }
             
             
@@ -42,18 +42,20 @@ class Solution {
                 j++;
             }else{
                 
-                if(count==0) ans++;
+                if(requiredChars==0) ans++;
                 
                 Character firstChar = str.charAt(i);
                
                if( map.containsKey(firstChar) && map.get(firstChar) == 0){
-                    count++;
+                    requiredChars++;
                 }
                 
                 //above and below if statement can't be merger because of the 
                 //scenario where character is present into the map but the 
                 //occurance is more than 1 ...then we can't increase the value of 
-                //count and even we have to just increase it's frequency by 1 only.
+                //requiredChars and even we have to just increase it's frequency by 1 only.
+
+                //understand the dif between freuency of characters in map & requiredChars variable
                 
                 if(map.containsKey(firstChar)){
                     map.put(firstChar, map.get(firstChar) + 1);

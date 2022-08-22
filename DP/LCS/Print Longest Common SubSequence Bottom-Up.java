@@ -12,16 +12,6 @@ int lcs( char[] X, char[] Y, int m, int n ){
     //Here we don't require to fill the matrix with 0 (for first row and first column) because int matrix is
     // by default inililize with 0.
     
-    // for(int col=0; col<n+1; col++)
-    //     matrix[0][col] = 0;
-      
-    // for(int row=1; row<m+1; row++)
-    //     matrix[row][0] = 0;
-    
-    
-    // for (int[] row : matrix)
-		  //  System.out.println(Arrays.toString(row));
-
     for(int i=1; i<m+1; i++){
         
         for(int j=1; j<n+1; j++){
@@ -42,6 +32,8 @@ int lcs( char[] X, char[] Y, int m, int n ){
     while(m>0 && n>0){
         
         if(X[m-1] == Y[n-1]){
+
+            //adding every new character at 0th index in the list...because we are iteratinr matrix/string in reverse order
             list.add(0, X[m-1]);
             m--;
             n--;
@@ -49,12 +41,12 @@ int lcs( char[] X, char[] Y, int m, int n ){
         }else if (matrix[m-1][n] > matrix[m][n-1]){
             m--;
             
-        }else if(matrix[m-1][n] < matrix[m][n-1]){
+        }else if(matrix[m][n-1] > matrix[m-1][n] ){
             n--;
         }
     }
     
-    for(Character ele : list) System.out.println(ele);
+    for(Character char : list) System.out.println(char);
     
 	return 0; 
 }

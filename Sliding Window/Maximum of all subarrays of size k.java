@@ -10,33 +10,33 @@ class Solution {
         
         int i=0;
         int j=0;
-        Deque<Integer> q = new LinkedList<>();
+        Deque<Integer> queue = new LinkedList<>();
         
         while(j<n){
             
             
-            if(q.size()==0){
-                    q.add( arr[j]);
-                }else{
-                    
-                    while(q.size() > 0 && q.peekLast() < arr[j]){
-                        q.removeLast();
-                    }
-                    q.add(arr[j]);
-                        
-                        //so here we are removiug smallest element from the back and till the point where we hit the bigger element..
-                        //which means we are formulating the Deque in descending order
+            if(queue.size()==0){
+                    queue.add( arr[j]);
+            }else{
+                
+                while(queue.size() > 0 && queue.peekLast() < arr[j]){
+                    queue.removeLast();
                 }
+                queue.add(arr[j]);
+                    
+                    //so here we are removiug smallest element from the back and till the point where we hit the bigger element..
+                    //which means we are formulating the Deque in descending order
+            }
                 
             
             if(j-i+1 < k){
                 j++;
             }else{
                 
-                result.add(q.peek());
+                result.add(queue.peek());
                 
-                if(arr[i] == q.peek()){
-                    q.removeFirst();
+                if(arr[i] == queue.peek()){
+                    queue.removeFirst();
                 }
                 
                 i++;

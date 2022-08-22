@@ -7,7 +7,9 @@ class Solution{
 	    int lcs = LCS(str1.toCharArray(), str2.toCharArray(), len1, len2);
     
 //       int insertions = len1 - lcs; 
-//       int deletions =  len2 - lcs;
+//       int  deletions = len2 - lcs;
+//		          total = len1 - lcs + len2 - lcs	
+//		          total = len1 + len2 - 2*lcs  
     
         return len1 + len2 - 2*lcs;
 	}

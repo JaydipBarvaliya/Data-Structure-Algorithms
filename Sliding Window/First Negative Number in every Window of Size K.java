@@ -4,7 +4,9 @@ class Compute {
         
         
         long[] result = new long[n-k+1];
+
         List<Long> nagList = new ArrayList<Long>();
+        
         int i = 0;
         int j = 0;
         int index = 0;

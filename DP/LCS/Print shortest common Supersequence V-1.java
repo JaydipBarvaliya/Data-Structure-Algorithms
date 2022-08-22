@@ -1,7 +1,3 @@
-import java.util.*;
-import java.io.*;
-import java.lang.*;
-
 public class LongestCommonSubsequence{
 
 int lcs( char[] X, char[] Y, int m, int n ){
@@ -60,6 +56,15 @@ int lcs( char[] X, char[] Y, int m, int n ){
     
 	return 0; 
 }
+
+
+
+
+
+
+
+
+
 
 
 

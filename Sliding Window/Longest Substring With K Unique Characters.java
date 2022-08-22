@@ -27,8 +27,12 @@ class Solution {
                 
                  while (map.size() > k) {
                      
-                    map.put(str.charAt(i), map.get(str.charAt(i)) - 1);
-                    if(map.get(str.charAt(i)) == 0) map.remove(str.charAt(i));
+                    Char currChar = str.charAt(i);
+
+                    map.put(currChar, map.get(currChar) - 1);
+
+                    if(map.get(currChar) == 0) map.remove(currChar);
+                    
                     i++;
                 }
                 

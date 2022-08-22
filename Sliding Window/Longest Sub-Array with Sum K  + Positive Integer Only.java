@@ -14,7 +14,7 @@ class Solution{
             if(sum < windowSum){
                 j++;
             }else if(sum == windowSum){
-                max = Math.max(j-i+1, max);
+                max = Math.max(max, j-i+1);
                 j++;
             }else if(sum > windowSum){
                 
@@ -24,7 +24,7 @@ class Solution{
                 }
                 
                 if(sum == windowSum){
-                  max = Math.max(j-i+1, max);
+                    max = Math.max(max, j-i+1);
                 }
                 j++;
             }

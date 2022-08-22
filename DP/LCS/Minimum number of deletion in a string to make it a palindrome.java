@@ -1,12 +1,12 @@
 class Solution { 
-    int minDeletions(String str, int lenOfStr){
+    int minDeletions(String str, int len){
         
         StringBuilder reverseStr = new StringBuilder();
         reverseStr.append(str).reverse();
         
-        int lenOfPalindromic = LCS(str.toCharArray(), reverseStr.toString().toCharArray(), str.length(), reverseStr.length() );
+        int lcs = LCS(str.toCharArray(), reverseStr.toString().toCharArray(), str.length(), reverseStr.length() );
         
-        return lenOfStr - lenOfPalindromic;
+        return len - lcs;
     }
     
     static int LCS(char[] X, char[] Y, int m, int n ){

@@ -14,6 +14,8 @@ class Solution {
 
             map.put(str.charAt(j), map.getOrDefault(str.charAt(j), 0) + 1);
             
+
+            //If we'll remove this condition entirely still code will works...but for the sack of sliding window general format keep it
             if(map.size() > j-i+1){
                 j++;
                 
@@ -21,7 +23,7 @@ class Solution {
                 //gonna be hit because of the reason that...
                 //map is defining the total number of unique 
                 //character in window...and j-i+1 is showing 
-                //all the character....so here we can definately say that
+                //all those character or j-i+1 denoting window size....so here we can definately say that
                 //unique character will never be exceed the actual character
                 //which are in windows
                 
@@ -35,10 +37,12 @@ class Solution {
             }else if(map.size() < j-i+1){ //maps has one duplicate character
                 
                  while (map.size() < j-i+1) {
+
+                    Char currChar = str.charAt(i);
+
+                    map.put(currChar, map.get(currChar) - 1);
                      
-                    map.put(str.charAt(i), map.get(str.charAt(i)) - 1);
-                     
-                    if(map.get(str.charAt(i)) == 0) map.remove(str.charAt(i));
+                    if(map.get(currChar) == 0) map.remove(currChar);
                      
                     i++;
                 }

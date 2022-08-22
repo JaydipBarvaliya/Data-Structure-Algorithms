@@ -1,30 +1,16 @@
-import java.io.*;
-import java.util.*;
-
-class GfG{
-    
-  public static void main(String args[]){
-      
-            Scanner sc = new Scanner(System.in);
-            int t = sc.nextInt();
-            while(t-->0){
-              
-                    String s = sc.next();
-                    Solution obj = new Solution();
-                    System.out.println(obj.longestPalinSubseq(s));
-                }
-                
-        }
-}
-
 class Solution{
     
     public int longestPalinSubseq(String str){
         
         StringBuilder reverseStr = new StringBuilder();
+
         reverseStr.append(str).reverse();
+
         return LCS(str.toCharArray(), reverseStr.toString().toCharArray(), str.length(), reverseStr.length() );
     }
+    
+
+
     
     static int LCS(char[] X, char[] Y, int m, int n ){
       
