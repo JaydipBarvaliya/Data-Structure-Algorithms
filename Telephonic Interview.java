@@ -16,8 +16,6 @@ https://www.cleverism.com/102-behavioral-interview-questions-including-answers/#
 let them know that in that case also how you delivered result........talk about those professional obstacles...hindrence to achieve a goal..walk through the obstacle....steps to overcome those obstacle..let them know the result....
 
 
-
-
 I knew that cloud services will comes in to the picture as org is moving most of the projects to the cloud and knew that some of the interconncted project of my current project is deployed in cloud. so knew this in advanced so strated working on AWS certfication for future easiness.
 Development certificate : it will help me in mu current development that whatever the code i'm writing can this work on cloud..even I get to know the more optimized way before deep dive into sprint....direct development into very optimistic way and same apply for architecture style....and for that also I have started working on my AWS certificatied solution architect....and that really helped in while product deployment...so this was the ancipated obstacles...it doesn't look that much big obstacle..but I know that..how much time it saved and how this learnig has driven the development in very optimistic way...and also finally product was deployed with the help of DevOps Teams...and this aws has caught my attenetion that level that I started to taking interest in DevOps tool and learning and that is why I have worked as a DevOps Engineer in Sunflower Lab
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -54,7 +52,7 @@ migration of databases without affecting the timeline because it was live databa
 challanges :
 
 stackholder do not wants any type of downtime...
-datalose is not bearable...
+data loss is not bearable...
 even new replica must be protected in a same way as existing db is protected...no compromised during migration...not data breach over migration
 replica must be tested for the scalable and also high available...
 
