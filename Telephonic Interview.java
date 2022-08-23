@@ -63,12 +63,7 @@ rolling with additional bateches
 blue green --> USED by use during the db migration ( 10% - 90 %)
 
 
-finally the task was achived by us....
-
-
-
-
-after tons of technical meeting and tons of techical jargons we finally did the database migration....
+finally the task was achived by us....after tons of technical meeting and tons of techical jargons we finally did the database migration....
 
 
 
@@ -76,7 +71,37 @@ after tons of technical meeting and tons of techical jargons we finally did the 
 
 ------------------------------------------------------------------------------------------------------
 
+6) Tell me about a time when everyone else on your team gave up on something but you pushed the team towards delivering a result.
 
+
+DevOps team gave up to re-work of creating similar type environment for every small project because for them these tasks were boring and also not suitable for their position
+
+DB 
+s3 bucket
+prometheous
+graphana
+two linux server
+giving permission based on project scope
+communicate and teach each developer that how things work
+
+repeating same thing for dev test stage and slightly diff for the prod
+
+
+
+propel team to create end to end flow from jenkins to ansible to cloudformation to AWS Services
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+what can I do better in future interviews?
+
+Why did you like working for this part of the company?
+
+what would be the most effective way for me to add value in your team or in amazon? If amazon hire me 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -143,4 +168,8 @@ mail.....is regarding final interview.....
 
 
 final - 4 people for 4 hours....
+
+
+
+
 
