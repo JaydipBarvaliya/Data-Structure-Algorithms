@@ -96,12 +96,20 @@ propel team to create end to end flow from jenkins to ansible to cloudformation 
 
 what can I do better in future interviews?
 
-Why did you like working for this part of the company?
-
 what would be the most effective way for me to add value in your team or in amazon? If amazon hire me 
 
+Why did you like working for As a SDE for the amazon?
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
