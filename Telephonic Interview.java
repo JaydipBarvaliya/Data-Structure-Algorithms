@@ -45,8 +45,6 @@ even writtern new test cases for the controller and services can also increase a
 DevOps style example.....
 
 
-
-
 migration of databases without affecting the timeline because it was live database and touching live databse may create tons of issue and it will never be reversable when the DATA term comes into the picture. to get rid of future unknown and never seen issue ... we have perform multiple POC and tons of testing in local...even the same things had been performed in the cloud to check things works in every case.
 
 challanges :

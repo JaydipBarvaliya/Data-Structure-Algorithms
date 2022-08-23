@@ -7,7 +7,8 @@ class Solution{
 	static int subsetSum(int arr[], int n, int targetSum, int subsetSum, int subsetCount){
 	
 		if (n == 0) {
-		    if (subsetSum == targetSum) subsetCount++;
+			if (subsetSum == targetSum){
+				 subsetCount++;
 	     	    return subsetCount;
 		}
 
@@ -16,4 +17,5 @@ class Solution{
 		return subsetCount;
 	}
 	
+}
 }
