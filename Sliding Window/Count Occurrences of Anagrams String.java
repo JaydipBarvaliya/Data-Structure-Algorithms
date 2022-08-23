@@ -9,7 +9,7 @@ class Solution {
         int k = pattern.length();
         Map<Character, Integer> map = new HashMap<Character, Integer>(); 
         
-        //popluate all "patt" into map
+        //popluate all "pattern" into map
         
         for(int index=0; index<k; index++){
             

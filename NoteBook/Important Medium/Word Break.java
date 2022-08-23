@@ -96,10 +96,11 @@ class Solution {
             
             for(String word : wordDict){
                 
-                if( i + word.length() <= len && str.substring(i, i+ word.length()).equals(word)){
+                if( i + word.length() <= len && str.substring(i, i+word.length()).equals(word)){
                     
                     dp[i] = dp[i + word.length()];
                     
+                    //at every index we are checking every word...but if any word is fitting then do not need to check any further word
                     if(dp[i] == true) break;
                 }
             }
