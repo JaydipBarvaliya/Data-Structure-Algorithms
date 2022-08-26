@@ -3,9 +3,6 @@ public class LongestCommonSubsequence{
 int lcs( char[] X, char[] Y, int m, int n ){
   
     int matrix[][] = new int[ m+1 ][ n+1 ];
- 
-    // Here we don't require to fill the matrix with 0 (for first row and first column) because int matrix is
-    // by default initialize with 0.
     
     int MAX=0;
     
