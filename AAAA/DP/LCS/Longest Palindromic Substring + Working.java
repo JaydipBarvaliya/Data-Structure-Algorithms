@@ -18,7 +18,7 @@ String lcs( char[] X, char[] Y, int m, int n ){
     int matrix[][] = new int[ m+1 ][ n+1 ];
 
     //Here we don't require to fill the matrix with 0 (for first row and first column) because int matrix is
-    // by default inililize with 0.
+    //by default inililize with 0.
     
     for(int i=1; i<m+1; i++){
         
