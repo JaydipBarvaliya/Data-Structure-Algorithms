@@ -21,13 +21,13 @@ class Solution {
             int currentValue   = val[i-1];
             
             
-            for(int c=1; c<W+1; c++){
+            for(int currCapacity=1; currCapacity<W+1; currCapacity++){
                 
-                if(currentWeight <= c){
-                   matrix[i][c] = Math.max( matrix[i-1][c] ,
-                                            matrix[i-1][c-currentWeight] + currentValue );
+                if(currentWeight <= currCapacity){
+                   matrix[i][currCapacity] = Math.max( matrix[i-1][currCapacity] ,
+                                            matrix[i-1][currCapacity-currentWeight] + currentValue );
                 }else{
-                   matrix[i][c] =  matrix[i-1][c];
+                   matrix[i][currCapacity] =  matrix[i-1][currCapacity];
                 }
             }
         }
