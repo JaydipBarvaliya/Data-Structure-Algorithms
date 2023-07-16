@@ -3,7 +3,7 @@ package com.leetcode.year_2020.DP.longest_common_subsequence;
 import com.util.LogUtil;
 
 /**
- * @author neeraj on 08/05/20
+ * @author Jaydip Barvliya on 08/05/20
  * Copyright (c) 2019, data-structures.
  * All rights reserved.
  */

@@ -8,13 +8,13 @@ class Solution{
             int currentWeight  =  wt[i-1];
             int currentValue   = val[i-1];
             
-            for(int c=1; c<W+1; c++){
+            for(int j=1; j<W+1; j++){
                 
-                if(currentWeight <= c){
-                   matrix[i][c] = Math.max( matrix[i-1][c] ,
-                                            matrix[i][c-currentWeight] + currentValue );
+                if(currentWeight <= j){
+                   matrix[i][j] = Math.max( matrix[i-1][j] ,
+                                            matrix[i][j-currentWeight] + currentValue );
                 }else{
-                   matrix[i][c] =  matrix[i-1][c];
+                   matrix[i][j] =  matrix[i-1][j];
                 }
             }
         }

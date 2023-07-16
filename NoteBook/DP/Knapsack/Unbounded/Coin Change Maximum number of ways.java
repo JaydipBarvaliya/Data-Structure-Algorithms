@@ -13,12 +13,10 @@ class Solution {
 
         for(int i=1; i<coin.length+1; i++){
             
-            int ValuOfCurrCoin =  coin[i-1];
-            
             for(int j=1; j<sum+1; j++){
                 
-                if(ValuOfCurrCoin <= j){
-                   matrix[i][j] =   matrix[i-1][j] +  matrix[i][j-ValuOfCurrCoin];
+                if(coin[i-1] <= j){
+                   matrix[i][j] =   matrix[i-1][j] +  matrix[i][j-coin[i-1]];
                 }else{
                    matrix[i][j] =   matrix[i-1][j];
                 }

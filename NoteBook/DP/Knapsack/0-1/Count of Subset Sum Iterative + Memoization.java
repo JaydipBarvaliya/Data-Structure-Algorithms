@@ -23,11 +23,9 @@ class Solution {
 
         for (int i = 1; i <= items.length; i++) {
 
-            int currentItem = items[i - 1];
-
             for (int j = 1; j <= totalSum; j++) {
-                if (currentItem <= j) {
-                    matrix[i][j] = matrix[i - 1][j] + matrix[i - 1][j - currentItem];
+                if (items[i - 1] <= j) {
+                    matrix[i][j] = matrix[i - 1][j] + matrix[i - 1][j - items[i - 1]];
                 } else {
                     matrix[i][j] = matrix[i - 1][j];
                 }

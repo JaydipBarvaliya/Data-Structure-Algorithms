@@ -20,7 +20,8 @@ class Solution{
 			count = lcs(X, Y, i - 1, j - 1, count + 1);
 		}
 		
-		//if chars are not matching that time we are comparing lcs(left and right) with the count that is derived from earlier...as we can see that when chars do not match above condition got failed
+		//if chars are not matching that time we are comparing lcs(left and right) with the count that is derived from earlier...
+		// as we can see that when chars do not match above condition got failed
 		count = Math.max(count, Math.max(lcs(X, Y, i, j - 1, 0), lcs(X, Y, i - 1, j, 0)));
 		
 		return count;

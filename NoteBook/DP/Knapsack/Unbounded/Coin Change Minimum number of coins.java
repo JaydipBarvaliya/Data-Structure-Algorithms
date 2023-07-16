@@ -34,12 +34,10 @@ class Solution{
         
         for(int i=2; i<coins.length+1; i++){
             
-            int ValuOfCurrCoin =  coins[i-1];
-            
             for(int j=1; j<sum+1; j++){
                 
                 if(ValuOfCurrCoin <= j){
-                   matrix[i][j] =   Math.min( 1 + matrix[i][j-ValuOfCurrCoin],
+                   matrix[i][j] =   Math.min( 1 + matrix[i][j-coins[i-1]],
                                                   matrix[i-1][j] );
                 }else{
                    matrix[i][j] =   matrix[i-1][j];
