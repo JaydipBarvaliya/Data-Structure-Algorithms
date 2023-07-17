@@ -9,6 +9,7 @@ class Solution {
         int n = Y.length;
         
         if(m == 0) return true;
+
         if(m != 0 && n ==0 ) return false;
         
         int matrix[][] = new int[ m+1 ][ n+1 ];
