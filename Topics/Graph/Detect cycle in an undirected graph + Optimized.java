@@ -24,8 +24,7 @@ class Solution {
             if(visited[neigh] == false){
                 if(detectCycle(neigh, node, list, visited) == true)
                     return true;
-            }
-            else if(neigh != parent)
+            }else if(neigh != parent)
                  return true;
         }
 
