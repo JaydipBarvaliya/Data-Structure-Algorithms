@@ -11,23 +11,28 @@ class Solution {
                   return true;
           }
       }
-      
       return false;
   }
     
     static boolean detectCycle(int node, int parent, ArrayList<ArrayList<Integer>> list, boolean[] visited){
 
-        visited[node] = true;
+         visited[node] = true;
         
         for(Integer neigh : list.get(node)){
             
+            //not visited
             if(visited[neigh] == false){
-                if(detectCycle(neigh, node, list, visited) == true)
-                    return true;
+                
+                if(detectCycle(neigh, node, list, visited) == true){
+                     return true;
+                }
+            
+            //visited because above condition false
+            //if any node is visited and it is not your parent and some one visit this node earlier which means there is a cycle.
+            
             }else if(neigh != parent)
                  return true;
         }
-
         return false;
    }
     
