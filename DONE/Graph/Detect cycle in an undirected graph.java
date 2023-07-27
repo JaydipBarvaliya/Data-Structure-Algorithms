@@ -3,8 +3,6 @@ class Solution {
         
       boolean[] visited = new boolean[V];
       
-      Arrays.fill(visited, false);
-      
       for(int i=0; i<V; i++){
           if(visited[i] == false){
               if(detectCycle(i, -1, list, visited) == true)
