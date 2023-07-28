@@ -24,12 +24,12 @@ class Solution {
                 if(detectCycle(neigh, node, list, visited) == true){
                      return true;
                 }
-            
+            }else if(neigh != parent){
+                return true;
+            }
             //visited because above condition false
             //if any node is visited and it is not your parent and some one visit this node earlier which means there is a cycle.
-            
-            }else if(neigh != parent)
-                 return true;
+                
         }
         return false;
    }
