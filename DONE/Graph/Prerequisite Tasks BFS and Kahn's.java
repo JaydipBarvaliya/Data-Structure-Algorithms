@@ -1,5 +1,5 @@
-class Solution{
-    static int[] findOrder(int V, int m, ArrayList<ArrayList<Integer>> prerequisites) {
+class Solution {
+    public boolean isPossible(int V,int P, int[][] prerequisites){
         
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         
@@ -7,8 +7,8 @@ class Solution{
             adj.add(new ArrayList<Integer>());
         }
         
-        for(int i=0; i<m; i++){
-            adj.get(prerequisites.get(i).get(1)).add(prerequisites.get(i).get(0));
+        for(int i=0; i<P; i++){
+            adj.get(prerequisites[i][0]).add(prerequisites[i][1]);
         }
         
         int[] indegree = new int[V];
@@ -27,13 +27,13 @@ class Solution{
         }
 
         
-        int[] topo = new int[V];
-        int counter = 0;
+        List<Integer> topo = new ArrayList<Integer>();
+        int i = 0;
 
         while(!queue.isEmpty()){
 
             int node = queue.poll();
-            topo[counter++] = node;
+            topo.add(node);
 
             for(int neigh: adj.get(node)){
                 indegree[neigh]--;
@@ -43,7 +43,8 @@ class Solution{
             }
         }
         
-        if(counter==V) return topo;
-        return new int[]{};
+        if(topo.size()==V) return true;
+        return false;
+        
     }
 }

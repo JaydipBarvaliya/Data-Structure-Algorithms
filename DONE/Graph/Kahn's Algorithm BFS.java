@@ -1,16 +1,11 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Solution{
-    static int[] findOrder(int V, int m, ArrayList<ArrayList<Integer>> prerequisites) {
-        
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        
-        for(int i=0; i<V; i++){
-            adj.add(new ArrayList<Integer>());
-        }
-        
-        for(int i=0; i<m; i++){
-            adj.get(prerequisites.get(i).get(1)).add(prerequisites.get(i).get(0));
-        }
-        
+    static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {
+
+
         int[] indegree = new int[V];
 
         for(int i=0; i<V; i++){
@@ -26,14 +21,13 @@ class Solution{
             }
         }
 
-        
         int[] topo = new int[V];
-        int counter = 0;
+        int i = 0;
 
         while(!queue.isEmpty()){
 
             int node = queue.poll();
-            topo[counter++] = node;
+            topo[i++] = node;
 
             for(int neigh: adj.get(node)){
                 indegree[neigh]--;
@@ -42,8 +36,6 @@ class Solution{
                 }
             }
         }
-        
-        if(counter==V) return topo;
-        return new int[]{};
+        return topo;
     }
 }
