@@ -1,11 +1,14 @@
 class Solution {
     public int lengthOfLongestSubstring(String str) {
         
+
+
+        //Crux of the problems if that, store data into the map and if map compromize which means map size is lesser then the amount of character between i and j 
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         int n= str.length();
         int i=0;
         int j=0;
-        int max=0;
+        int longest=0;
         
         while(j<n){
             
@@ -31,14 +34,14 @@ class Solution {
             }
             else if(map.size() == j-i+1){
                 
-                max = Math.max(max, j-i+1);
+                longest = Math.max(longest, j-i+1);
                 j++;
                 
             }else if(map.size() < j-i+1){ //maps has one duplicate character
                 
                  while (map.size() < j-i+1) {
 
-                    Char currChar = str.charAt(i);
+                    char currChar = str.charAt(i);
 
                     map.put(currChar, map.get(currChar) - 1);
                      
@@ -49,6 +52,6 @@ class Solution {
                 j++;
             }
         }
-        return max;
+        return longest;
     }
 }

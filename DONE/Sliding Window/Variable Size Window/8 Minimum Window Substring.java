@@ -10,6 +10,8 @@ class Solution {
 		        
 
 		int count = map.size();
+
+		//this Integer.MAX_VALUE is most important, just try to put 0 and this program will not run..think twice
 		int minWinSize = Integer.MAX_VALUE;
 		String ans = "";
 
@@ -19,13 +21,13 @@ class Solution {
 
 		while( j<n) {
             
-			char ch=str.charAt(j);
+			char rightChar = str.charAt(j);
             
-			if(map.containsKey(ch)) {
+			if(map.containsKey(rightChar)) {
 			
-                map.put(ch, map.get(ch) - 1 );
+                map.put(rightChar, map.get(rightChar) - 1 );
                 
-				if(map.get(ch) == 0){
+				if(map.get(rightChar) == 0){
 					count--; 
 				}			
 			}
@@ -60,10 +62,9 @@ class Solution {
                     //After Reducing every character we are again checking remaining
                     //window that is it eligible for potential candidate or not
                     
-                    int currWinSizee = j-i+1; 
-					if(count == 0 && currWinSizee < minWinSize) {
+					if(count == 0 && j-i+1 < minWinSize) {
 						ans = str.substring(i,j+1);
-						minWinSize = currWinSizee;
+						minWinSize = j-i+1;
 					}
 				}
 			}

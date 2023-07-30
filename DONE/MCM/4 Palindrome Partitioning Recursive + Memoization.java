@@ -12,16 +12,16 @@ class Solution{
         
         
         if( i>=j || isPalindrome(str, i, j) ) return 0;
-        if(matrix[i][j] != -1) return matrix[i][j];
 
-        
+        if(matrix[i][j] != -1) return matrix[i][j];
         
         int min = Integer.MAX_VALUE;
+
         for(int k=i; k<j; k++){
+          
             int tempAns = 1 + solve(matrix, str, i, k) + solve(matrix, str, k+1, j);
             min  = Math.min(min, tempAns);
         }
-        
         
         matrix[i][j] = min;
         return min;
