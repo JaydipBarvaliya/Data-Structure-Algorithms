@@ -18,7 +18,7 @@ class Solution{
                 j++;
             }else if(sum > windowSum){
                 
-                while(sum>windowSum && i<=j){
+                while(sum > windowSum && i<=j){
                     sum = sum - arr[i];
                     i++;
                 }
