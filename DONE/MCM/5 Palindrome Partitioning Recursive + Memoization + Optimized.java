@@ -1,13 +1,18 @@
 class Solution{
     static int palindromicPartition(String str){
         
-        int[][] matrix = new int[str.length() + 1 ][str.length() + 1];
+        int[][] matrix = new int[str.length()][str.length()];
         for (int[] row : matrix)
             Arrays.fill(row, -1);
         
         return solve(matrix, str, 0, str.length()-1);
     }
     
+
+    //Here before going to two separate direction we are checking what if first call to the solve function 
+    //calculate some answer which is required for second solve() function which is right side. 
+    //So before going to the right we are ensuring the left and then if require then we are going to the right
+
     static int solve(int[][] matrix, String str, int i, int j){
         
         if( i>=j || isPalindrome(str, i, j) ) return 0;
