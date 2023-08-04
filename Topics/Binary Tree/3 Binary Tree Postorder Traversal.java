@@ -1,19 +1,3 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-
  // Recursive soltuion
 class Solution {
     List<Integer> list = new ArrayList();
@@ -29,12 +13,21 @@ class Solution {
 
 
 // Using 2 stack
+//one stack hold the Actual Nodes and another stack hold the value of each node
+
+// push root value in stack 2
+// push root.left int stack 1 
+// push root.right int stack 1 
+
+//repeat this process until stack1 is not empty
+
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
 
         if(root == null) return new ArrayList();
 
-        List<Integer> list = new ArrayList();
+        List<Integer> list = new ArrayList<Integer>();
+
         Stack<TreeNode> s1 = new Stack();
         Stack<Integer> s2 = new Stack();
 
@@ -42,17 +35,18 @@ class Solution {
 
         while(!s1.isEmpty()){
 
-            TreeNode curr = s1.pop();
-            s2.push(curr.val);
+           root = s1.pop();
 
-            if(curr.left  != null) s1.push(curr.left);
-            if(curr.right != null) s1.push(curr.right);
+            s2.push(root.val);
+
+            if(root.left  != null ) s1.push(root.left);
+            if(root.right != null ) s1.push(root.right);
         }
 
         while(!s2.isEmpty()){
             list.add(s2.pop());
         }
-
+        
         return list;
     }
 }

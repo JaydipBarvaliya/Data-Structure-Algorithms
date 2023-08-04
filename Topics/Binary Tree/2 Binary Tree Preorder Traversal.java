@@ -40,7 +40,8 @@ class Solution {
                 list.add(root.val);
                 root = root.left;
             }
-            root = stack.pop().right;
+            root = stack.pop()
+            root = root.right;
         }
         return list;
     }
