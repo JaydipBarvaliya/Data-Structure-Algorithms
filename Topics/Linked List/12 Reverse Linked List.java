@@ -1,4 +1,4 @@
-//Recursive 
+//Recursive -- Pointing Back
 public ListNode reverseList(ListNode head) {
         if(head == null || head.next == null) return head;
                 
@@ -11,7 +11,7 @@ public ListNode reverseList(ListNode head) {
     
     
     
-//Looping    
+//Iterative Approch -- Create a newNode and link rest with them
 public ListNode reverseList(ListNode head) {
      
         ListNode reversed = null;

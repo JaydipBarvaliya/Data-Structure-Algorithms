@@ -24,8 +24,6 @@
  }
 
 
-
-
 //Recursive
  class Solution {
      TreeNode pre = null;
@@ -48,24 +46,29 @@
 //Simple one
  class Solution {
      public void flatten(TreeNode root) {
-          
-             if(root == null) return;
-         
-             if(root.left  !=null) flatten(root.left);
-             
-             if(root.left!=null){
+
+            if(root == null) return;
+
+            if(root.left !=null){
+                 flatten(root.left);
+            }
+
+            if(root.left!=null){
                  TreeNode temp = root.right;
                  root.right = root.left;
                  root.left = null;
-                 
+
                  if( temp != null){
                      TreeNode iterator = root;
                      while(iterator.right!=null) iterator = iterator.right;
                      iterator.right = temp;
                  }
-             }
-         if(root.right !=null) flatten(root.right);
-         
+            }
+
+            if(root.right !=null){
+                flatten(root.right);
+            }
+
          }
  }
 

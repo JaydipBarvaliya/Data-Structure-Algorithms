@@ -3,6 +3,10 @@ class Solution {
     public boolean validate(TreeNode root, Integer min, Integer max) {
 
         if (root == null) return true;
+
+
+        // [5,4,6,null,null,3,7] this is best test case to understand everything
+
         if (max != null && root.val >= max) return false;
         if (min != null && root.val <= min) return false;
 
