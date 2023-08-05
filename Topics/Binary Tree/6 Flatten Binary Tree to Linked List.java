@@ -45,7 +45,7 @@
 
 
 
-//simple one
+//Simple one
  class Solution {
      public void flatten(TreeNode root) {
           
@@ -70,7 +70,7 @@
  }
 
 
- // similar to Morris Algoritham but slide changes. 
+ //Similar to Morris Algoritham but slide changes. 
  class Solution {
      public void flatten(TreeNode visitor) {
          
