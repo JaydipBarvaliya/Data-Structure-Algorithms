@@ -30,28 +30,43 @@ public class Solution {
 }
 
 
+// Time Complexity: O(2*max(length of list1,length of list2))
+
+// Reason: Uses the same concept of the difference of lengths of two lists.
+
+// Space Complexity: O(1)
+
+// Reason: No extra data structure is used
 
 
+----------------------------------------------------------------------------
 
-------------------------------------------------------------------------------------------
- //Short Version
-    
+
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        
         ListNode pA = headA;
         ListNode pB = headB;
         
-        while(pA != pB){
-            pA = pA == null? pA = headB : pA.next;
-            pB = pB == null? pB = headA : pB.next;
+        Set<ListNode> listOfA = new HashSet<>();
+        
+        while(pA != null){
+            listOfA.add(pA);
+            pA = pA.next;
         }
         
-        return pA;
+        while(pB!=null){
+            if(listOfA.contains(pB)){
+                return pB;
+            }
+            pB = pB.next;
+        }
+    
+        return null;
     }
 }
 
 ------------------------------------------------------------------------------------------
-
 
 
 //Iterative Version
@@ -102,29 +117,3 @@ public class Solution {
 }
 
 
-----------------------------------------------------------------------------
-
-
-public class Solution {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        
-        ListNode pA = headA;
-        ListNode pB = headB;
-        
-        Set<ListNode> listOfA = new HashSet<>();
-        
-        while(pA != null){
-            listOfA.add(pA);
-            pA = pA.next;
-        }
-        
-        while(pB!=null){
-            if(listOfA.contains(pB)){
-                return pB;
-            }
-            pB = pB.next;
-        }
-    
-        return null;
-    }
-}

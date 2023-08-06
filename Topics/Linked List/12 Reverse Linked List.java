@@ -24,7 +24,7 @@ public ListNode reverseList(ListNode head) {
         return reversed; 
     }
 
-//changing internal links
+//changing internal links without creating newNode
 public ListNode reverseList(ListNode cur) {
 
         ListNode pre = null;

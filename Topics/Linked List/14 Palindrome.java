@@ -1,13 +1,60 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+// The naive approach here would be to run through the linked list and create an array of its values, then compare the array
+// to its reverse to find out if it's a palindrome. Though this is easy enough to accomplish, we're challenged to find an
+// approach with a space complexity of only O(1) while maintaining a time complexity of O(N).
+
+// Time O(N) 
+// Space O(N) 
+
+
+// (1) find the middle using slow and fast pointer...slow will stop exactly at middle
+// (2) start reversing from the slow till end of the list.. ( reversing second half)
+// (3) compare the first and the second reversed half...if any mismatch then it is not palindrome..
+
+// Time O(N) 
+// Space O(1) 
+
+
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head; 
+        
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+
+        ListNode prev = null;
+        ListNode curr = slow;
+
+        while(curr != null){
+
+            ListNode forw = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = forw;
+        }
+
+        fast = head;
+        slow = prev;
+
+
+        while(slow!=null){
+            if(slow.val != fast.val ) return false;
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+    return true;
+    }
+}
+// ---------------------------------------------------------------------------------------------------------------------------------------
+
+
+//Using Stack -- Instead of reversing we can store first / second half into the stack and when we do stack.pop() then we get all those
+// variable in reverse manner so we can easily compare to the other half.
+
 class Solution {
     public boolean isPalindrome(ListNode head) {
         
@@ -37,6 +84,9 @@ class Solution {
     return true;
     }
 }
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
 
 //Reverse the second half and then compare it to first..here we have made many mistake while doing reversing ...
 //there are many other ways to do revering in easy manner
