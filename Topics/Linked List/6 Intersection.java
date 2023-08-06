@@ -1,4 +1,13 @@
-//Simple version 
+// In this solution we are making the making the average of 2 path..
+// If first path has total 5 ele and second has 6th and....Swapping those pointer with another path will
+// average out the total path
+// 1st pointer ( 5 it's own elements +  6 another path elements = 11 elements)
+// 2nd pointer ( 6 it's own elements +  5 another path elements = 11 elements)
+//anyhow we are making the total elements to visit as same for both the pointer so there are chances that they collide at the elem which is shared by both.
+
+
+
+//Simple version
 
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
@@ -19,6 +28,10 @@ public class Solution {
         return hA;
     }
 }
+
+
+
+
 
 ------------------------------------------------------------------------------------------
  //Short Version
