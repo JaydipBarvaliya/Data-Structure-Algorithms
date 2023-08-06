@@ -52,17 +52,9 @@ public class Solution {
 
 ------------------------------------------------------------------------------------------
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
+
+
+//Iterative Version
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode pA = headA;
@@ -111,17 +103,8 @@ public class Solution {
 
 
 ----------------------------------------------------------------------------
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
+
+
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         
