@@ -35,14 +35,21 @@ class Solution {
 
 
 
-public ListNode removeNthFromEnd(ListNode head, int n) {
-    
+
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+
     ListNode start = new ListNode(0);
-    ListNode slow = start, fast = start;
+    ListNode slow = start;
+	ListNode fast = start;
     start.next = head;
     
+
+    //Remeber assignment of slow and fast to the START is most important..
+    //also we should start loop from 0 till N which means we are adding one cycle extra    \
+    //because we started from start node (which was created by us and we tailes head to it)
     
-    for(int i=1; i<=n+1; i++)   {
+    for(int i=0; i<=n; i++)   {
         fast = fast.next;
     }
     
@@ -53,4 +60,6 @@ public ListNode removeNthFromEnd(ListNode head, int n) {
 
     slow.next = slow.next.next;
     return start.next;
+        
+    }
 }
