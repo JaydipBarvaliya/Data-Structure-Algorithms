@@ -1,3 +1,6 @@
+// Time Complexity: O(N + E) + O(N), Where N = Nodes, 2E is for total degrees as we traverse all adjacent nodes. In the case of connected components of a graph, it will take another O(N) time.
+// Space Complexity: O(N) + O(N) ~ O(N), Space for recursive stack space and visited array.
+
 class Solution {
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> list) {
         

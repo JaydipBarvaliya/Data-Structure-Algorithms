@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+// Time Complexity: O(N + E) + O(N), Where N = Nodes, 2E is for total degrees as we traverse all adjacent nodes. In the case of connected components of a graph, it will take another O(N) time.
+// Space Complexity: O(N) + O(N) ~ O(N), Space for queue data structure and visited array.
 
 class Pair{
     int node;

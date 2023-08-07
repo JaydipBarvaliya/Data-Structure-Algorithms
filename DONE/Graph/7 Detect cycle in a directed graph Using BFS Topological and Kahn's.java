@@ -19,8 +19,7 @@ class Solution {
         int[] topo = new int[V];
         int i = 0;
         int cnt = 0;
-        
-        
+    
         while(!queue.isEmpty()){
 
             int node = queue.poll();
