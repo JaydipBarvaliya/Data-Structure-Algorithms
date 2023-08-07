@@ -1,3 +1,15 @@
+//Step 1 :  First fill out Indegree 
+//Step 2 :  Add elements into the Queue which indegree is 0
+//Step 3 :  Iterate Queue until it become empty
+//Step 4 :  (A) pop elem from queue and run through it's neighs
+//          (B) If Indegree of Curr is 0 then add it to the ans
+//          (C) reduce indegree of neighs
+//          (D) If Indegree of neigh is 0 then add it it in Queue
+
+// CRUX 1 : Indegree of queue elem is 0 then that is ans
+// CRUX 2 : Indegree of neigh elem is 0 then add it in the queue
+
+
 class Solution {
     public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {
 

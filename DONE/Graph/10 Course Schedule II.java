@@ -1,3 +1,56 @@
+//Solution : 1 
+class Solution {
+    public int[] findOrder(int V, int[][] arr) {
+        
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        
+        for(int i=0; i<V; i++){
+            adj.add(new ArrayList<>());
+        }
+        
+        for(int i=0; i<arr.length; i++){
+            adj.get(arr[i][1]).add(arr[i][0]);
+        }
+        
+        int[] indegree = new int[V];
+
+        for(int i=0; i<V; i++){
+            for(int neigh : adj.get(i)){
+                indegree[neigh]++;
+            }
+        }
+
+        Queue<Integer> queue = new LinkedList<>();
+
+        for(int i=0; i<V; i++){
+            if(indegree[i] == 0){
+                queue.add(i);
+            }
+        }
+
+        int[] topo = new int[V];
+        int counter = 0;
+
+        while(!queue.isEmpty()){
+
+                int curr = queue.poll();
+                topo[counter++] = curr;
+
+                for(int neigh: adj.get(curr)){
+                    indegree[neigh]--;
+                    if(indegree[neigh] == 0){
+                        queue.add(neigh);
+                    }
+                }
+        }
+        
+        if(counter==V) return topo;
+        return new int[]{};
+    }
+}
+
+
+//Solution : 2 -- Pure DFS 
 class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         
