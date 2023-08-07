@@ -1,8 +1,12 @@
-import java.util.ArrayList;
-import java.util.Stack;
+// Time Complexity: O(N+E) 
+// N = Number of node , E = Number of Edges
+// Space Complexity: O(N) + O(N)
+// Visited Array and Stack data structure. Both will be using O(N).
+// Auxiliary Space Complexity:  O(N)
+// Recursion call of DFS
 
 class Solution{
-    
+
     static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj){
 
         boolean[] visited = new boolean[V];
@@ -18,7 +22,6 @@ class Solution{
         for(int i=0; i<V; i++){
             answer[i] = stack.pop();
         }
-
         return answer;
     }
 
