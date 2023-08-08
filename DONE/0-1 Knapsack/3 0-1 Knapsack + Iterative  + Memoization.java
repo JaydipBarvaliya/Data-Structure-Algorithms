@@ -8,7 +8,7 @@ class Solution {
 
             for(int j=1; j<=W; j++){
                 
-                if(wt[i-1] <= j){
+                if(wt[i-1] <= j){ // Make sure you are considering j instead of W
                    matrix[i][j] = Math.max( val[i-1]  + matrix[i-1][j-wt[i-1]],
                                                         matrix[i-1][j]);
                 }else{

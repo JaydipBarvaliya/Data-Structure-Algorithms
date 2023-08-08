@@ -13,9 +13,7 @@ class Solution{
             /* Check if sum can be obtained by any of the following
             (a) including the last element
             (b) excluding the last element */
-            return isSubsetSum(n-1, arr, sum-arr[n-1])
-                    ||
-                   isSubsetSum(n-1, arr, sum);
+            return isSubsetSum(n-1, arr, sum-arr[n-1]) || isSubsetSum(n-1, arr, sum);
         }
         else{
             return isSubsetSum(n-1, arr, sum);
