@@ -2,25 +2,26 @@ class Solution {
     
     public int findTargetSumWays(int[] items, int diff) {
         
-        int len = items.length;
-        int totalSum=0;
+        int totalSum = 0;
         
-        for(int summer : items)
-             totalSum += summer;
+        for(int ele : items)
+             totalSum = totalSum +  ele;
 
-        if(totalSum < Math.abs(diff) || (diff + totalSum) %2 != 0) return 0;
+        if(totalSum < Math.abs(diff) || (diff + totalSum) %2 != 0) 
+            return 0;
 
         int s1 = (diff + totalSum)/2;
         
-        return subsetSum(items, len, s1);
+        return subsetSum(items, s1);
     }
     
-    int subsetSum(int a[], int n, int sum){
+    int subsetSum(int arr[], int sum){
     
+        int n = arr.length;
         int[][] matrix = new int[n + 1][sum + 1];
         
         
-        for (int col=1;  col<=sum;  col++)
+        for (int col=1;  col<sum+1; col++)
 			matrix[0][col] = 0;
         
 
@@ -28,8 +29,8 @@ class Solution {
         
         int zeroCount = 0;
         
-		for (int row=1;  row<a.length+1;  row++){
-	        if(a[row-1] == 0) { 
+		for (int row=1;  row<n+1;  row++){
+	        if(arr[row-1] == 0) { 
 	            zeroCount++;
 	            matrix[row][0] = (int)Math.pow(2, zeroCount);
 	        }else{
@@ -38,15 +39,16 @@ class Solution {
     	}
         
  
-        for (int i = 1; i <= n; i++){
-            for (int j = 1; j <= sum; j++){
+        for (int i = 1; i <n+1; i++){
+            for (int j = 1; j <sum+1; j++){
 
-                if (a[i - 1] <= j)
-                    matrix[i][j] = matrix[i - 1][j] + matrix[i - 1][j - a[i - 1]]; 
+                if (arr[i - 1] <= j)
+                    matrix[i][j] = matrix[i - 1][j] + matrix[i - 1][j - arr[i - 1]]; 
                 else
                     matrix[i][j] = matrix[i - 1][j];
                 }
             }
+
         return matrix[n][sum];
     }
 }
