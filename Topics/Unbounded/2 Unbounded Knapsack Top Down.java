@@ -5,14 +5,10 @@ class Solution{
 
         for(int i=1; i<val.length+1; i++){
             
-            int currentWeight  =  wt[i-1];
-            int currentValue   = val[i-1];
-            
             for(int j=1; j<W+1; j++){
                 
-                if(currentWeight <= j){
-                   matrix[i][j] = Math.max( matrix[i-1][j] ,
-                                            matrix[i][j-currentWeight] + currentValue );
+                if(wt[i-1] <= j){
+                   matrix[i][j] = Math.max( val[i-1] + matrix[i][j- wt[i-1]] , matrix[i-1][j]);
                 }else{
                    matrix[i][j] =  matrix[i-1][j];
                 }
