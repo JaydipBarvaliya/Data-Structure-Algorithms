@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+
 class Solution {
     static ArrayList<Integer> max_of_subarrays(int arr[], int n, int k) {
         
