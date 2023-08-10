@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class LongestCommonSubsequence{
 
 int lcs( char[] X, char[] Y, int m, int n ){
@@ -21,7 +24,7 @@ int lcs( char[] X, char[] Y, int m, int n ){
     
     m = matrix.length-1;
     n = matrix[0].length-1;
-    List<Character> list = new ArrayList<Character>();
+    List<Character> list = new ArrayList<>();
     
     while(m>0 && n>0){
         

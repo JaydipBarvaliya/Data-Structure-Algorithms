@@ -1,16 +1,13 @@
-class Solution{
-    
-    public int longestPalinSubseq(String str){
+class Solution {
+    public int minInsertions(String str) {
         
-        StringBuilder reverseStr = new StringBuilder();
-
+    StringBuilder reverseStr = new StringBuilder();
         reverseStr.append(str).reverse();
-
-        return LCS(str.toCharArray(), reverseStr.toString().toCharArray(), str.length(), reverseStr.length() );
+        
+        int lcs = LCS(str.toCharArray(), reverseStr.toString().toCharArray(), str.length(), reverseStr.length() );
+        
+        return str.length() - lcs;
     }
-    
-
-
     
     static int LCS(char[] X, char[] Y, int m, int n ){
       
