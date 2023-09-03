@@ -1,4 +1,6 @@
 // This approach is correct however, as per the GFG there is tons of constraints has been given so we need to mold this code as per those constraints
+// Use 3D array instead of map as even an unordered map takes logn time to find the key and when the key is string the the time complexity will be O(s.length()logn) so it'll give tle.
+
 class Solution{
     
     static int countWays(int N, String str){
