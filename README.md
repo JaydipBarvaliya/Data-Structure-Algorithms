@@ -1,15 +1,24 @@
 Click [here](https://drive.google.com/drive/folders/1pPShHEJsQOXM57kCt965WVymMzHg_3KD?usp=sharing) go to DSA :books: Books :books:	 
 
+
+-----
+# Insights
+In-order, Pre-order, and Post-order traversals are Depth-First traversals.
+For a Graph, the complexity of a Depth First Traversal is O(n + m), where n is the number of nodes, and m is the number of edges.
+Since a Binary Tree is also a Graph, the same applies here. The complexity of each of these Depth-first traversals is O(n+m).
+Since the number of edges that can originate from a node is limited to 2 in the case of a Binary Tree, the maximum number of total edges in a Binary Tree is n-1, where n is the total number of nodes.
+The complexity then becomes O(n + n-1), which is O(n).
+
 -----
 #  Top-Down DP :vs:	 Bottom-Up D
-Anyone who is getting confused with Top-down and bottom up, Recursion memoization is always TOP-DOWN(and not bottom up),
-as we take a bigger problem and recusively solve for the smaller subproblems. Whereas in tabular DP where we start filling
+For anyone who is getting confused with Top-down and bottom-up, Recursion memoization is always TOP-DOWN(and not bottom-up),
+as we take a bigger problem and recursively solve for the smaller subproblems. Whereas in tabular DP where we start filling
 the table from top left to bottom right is actually BOTTOM-UP because we compute dp values of smaller subproblems first and
-then using these values compute dp value of bigger problems.
+then using these values compute dp values of bigger problems.
 
 Recursion + memoization is called Top-Down DP and Tabulation method  is called Bottom-Up DP.
 
-PS: Top down and Bottom up is decided by the essence of methodology and not by whether we are filling table from top to bottom or vice versa!
+PS: Top-down and Bottom up is decided by the essence of methodology and not by whether we are filling table from top to bottom or vice versa!
 
 -----
 # Longest Common Subsequence Recursive Visualization
