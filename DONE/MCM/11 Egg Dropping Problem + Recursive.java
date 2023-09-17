@@ -70,3 +70,8 @@ class Solution {
         return min;
 	}
 }
+
+
+//Time Complexity :  Since we have to loop n times . 
+//                   And for each n times we are calling 2 recursive fun so 2^n
+//                   hence n*2^n

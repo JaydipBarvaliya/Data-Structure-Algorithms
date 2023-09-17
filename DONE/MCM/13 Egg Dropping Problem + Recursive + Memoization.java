@@ -53,3 +53,7 @@ class Solution {
         return min;
     }
 }
+
+
+// Time Complexity : N^3 since its a variation of MCM but it can be further optimized 
+// to N^2logN by using binary search instead of linear search for  k loop 
